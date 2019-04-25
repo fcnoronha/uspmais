@@ -1,0 +1,46 @@
+
+USUARIO_TABLE
+	id_user (PK)
+	nome
+	email
+	foto
+	instituto 
+	curso
+	info
+	is_user
+	link_site
+	link_fb
+	link_tt
+	is_org
+	lista_emails (Lista de emails que iam recebem notificações)
+	tags
+
+EVENTOS
+	id_evento (PK)
+	id_organizador (FK)
+	nome
+	foto
+	info
+	localizacao
+	data
+	horario
+	cnt_eu_vou
+	cnt_eu_quero
+	lista_emails (Lista de emails que iam receber notificações)
+	tags (atribuidas pelos usuario + instituto, nome e curso)
+	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
