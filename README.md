@@ -1,3 +1,20 @@
+# Como executar
+
+- `docker-compose build` - Constroi a imagem do projeto atual
+
+- `docker-compose up` - Botando a aplicação
+
+- Acesse `http://localhost:3000`
+
+- `docker-compose down` - Para tudoooo!
+
+- Caso tenha feito modificações na gemas ou algo mais profundo, execute `docker-compose run web bundle install && docker-compose up --build`
+
+> Comandos previamente executados (não mais necessarios)   
+> - 'docker-compose run web rails new . --force --no-deps --database=postgresql'   
+> - 'sudo chown -R $USER:$USER .'
+> - 'docker-compose run web rake db:create'
+
 # Objetivo
 
 Um site que diz sobre hórarios das atividades das atividades extracurriculares do IME, potencialmente outras instituições também serão incluidas. Tais atividades podem ser:
