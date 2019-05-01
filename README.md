@@ -1,8 +1,8 @@
 # Como executar
 
-- `docker-compose build` - Constroi a imagem do projeto atual
+- `sudo docker-compose build web` - Constroi a imagem do projeto atual
 
-- `docker-compose up` - Botando a aplicação
+- `sudo docker-compose up` - Botando a aplicação
 
 - Acesse `http://localhost:3000`
 
@@ -17,15 +17,15 @@
 
 # Objetivo
 
-Um site que diz sobre hórarios das atividades das atividades extracurriculares do IME, potencialmente outras instituições também serão incluidas. Tais atividades podem ser:
+Um site contendo informações sobre hórarios das atividades das atividades extracurriculares do IME, potencialmente outras instituições também serão incluidas. Tais atividades podem ser:
 - Grupos de extensão;
 - Atividades de dança;
 - Atividades de atleticas;
 - Feiras e exposições;
 - Etc.
 
-Todo o site contaria com uma gama de filtros e seleçoes, fazendo com que o usuario pudesse ver todas as atribuições da atividade, tais como, horario, abertura ao publico, preços, etc.    
-O usuario poderia realizar um login, para assim poder gerenciar todos seus interesses, e, inclusive, se inscrever em tais eventos. Os organizadores de evento teriam um login para gerenciar seus eventos, obtendo informações sobre o publico atingindo, quantidade de interessados, etc.  
+Todo o site contaria com uma gama de filtros e seleções, fazendo com que o usuário pudesse ver todas as atribuições da atividade, tais como, horário, abertura ao público, preços, etc.    
+O usuário poderia realizar um log in para gerenciar todos seus interesses e se inscrever em tais eventos. Os organizadores de evento teriam um log in para gerenciar seus eventos, obtendo informações sobre o publico atingindo, quantidade de interessados, etc.  
 
 ## Nome dos integrantes
 - Daniela Favero, 10277443
