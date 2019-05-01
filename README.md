@@ -1,8 +1,10 @@
 # Como executar
 
-- `sudo docker-compose build web` - Constroi a imagem do projeto atual
+- `sudo docker-compose build web` - Constrói a imagem do projeto atual
 
-- `sudo docker-compose up` - Botando a aplicação
+- `sudo docker-compose run web rake db:create` - Cria a database
+
+- `sudo docker-compose up` - Subindo a aplicação
 
 - Acesse `http://localhost:3000`
 
@@ -10,10 +12,9 @@
 
 - Caso tenha feito modificações na gemas ou algo mais profundo, execute `docker-compose run web bundle install && docker-compose up --build`
 
-> Comandos previamente executados (não mais necessarios)   
+> Comandos previamente executados (não mais necessários)   
 > - 'docker-compose run web rails new . --force --no-deps --database=postgresql'   
 > - 'sudo chown -R $USER:$USER .'
-> - 'docker-compose run web rake db:create'
 
 # Objetivo
 
