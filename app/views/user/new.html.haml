@@ -1,0 +1,8 @@
+%h1 User#new
+= form_with scope: :user, url: new_user_path, local: true  do |f|
+  = f.label :email
+  = f.text_field :email
+  = f.label :senha
+  = f.text_field :senha
+  = f.submit
+%p Find me in app/views/user/new.html.haml

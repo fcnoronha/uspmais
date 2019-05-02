@@ -7,5 +7,4 @@ class UserController < ApplicationController
       render plain: params[:user].inspect
   end
 
-
 end
