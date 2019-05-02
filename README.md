@@ -6,6 +6,8 @@
 
 - Acesse `http://localhost:3000`
 
+- `docker-compose run --service-ports --rm uspmais` - Abre terminal iterativo dentro do docker
+
 - `docker-compose down` - Para tudoooo!
 
 - Caso tenha feito modificações na gemas ou algo mais profundo, execute `docker-compose run web bundle install && docker-compose up --build`
