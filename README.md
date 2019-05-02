@@ -8,7 +8,7 @@
 
 - Acesse `http://localhost:3000`
 
-- `docker-compose run --service-ports --rm uspmais` - Abre terminal iterativo dentro do docker
+- `docker exec -ti uspmais_web_1 /bin/bash` - Abre terminal iterativo dentro do docker
 
 - `docker-compose down` - Para tudoooo!
 
