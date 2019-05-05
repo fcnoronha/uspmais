@@ -4,7 +4,7 @@
 
 - `sudo docker-compose run web rake db:create` - Cria a database
 
-- `sudo docker-compose up` - Subindo a aplicação
+- `sudo docker-compose up -d` - Subindo a aplicação, -d é para rodar em background
 
 - Acesse `http://localhost:3000`
 
@@ -17,6 +17,10 @@
 > Comandos previamente executados (não mais necessários)   
 > - 'docker-compose run web rails new . --force --no-deps --database=postgresql'   
 > - 'sudo chown -R $USER:$USER .'
+
+# Mudanças
+
+Mudanças podem ser acompanhadas no arquivo `CHANGELOG.md`
 
 # Objetivo
 
