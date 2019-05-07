@@ -1,6 +1,6 @@
 # Como executar
 
-- `sudo docker-compose build web` - Constrói a imagem do projeto atual
+- `sudo docker-compose build` - Constrói a imagem do projeto atual
 
 - `sudo docker-compose run web rake db:create` - Cria a database
 
@@ -8,9 +8,9 @@
 
 - Acesse `http://localhost:3000`
 
-- `docker exec -ti uspmais_web_1 /bin/bash` - Abre terminal iterativo dentro do docker
+- `sudo docker exec -ti uspmais_web_1 /bin/bash` - Abre terminal iterativo dentro do docker
 
-- `docker-compose down` - Para tudoooo!
+- `sudo docker-compose down` - Para tudoooo!
 
 - Caso tenha feito modificações na gemas ou algo mais profundo, execute `docker-compose run web bundle install && docker-compose up --build`
 
