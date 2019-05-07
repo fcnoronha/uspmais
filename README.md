@@ -2,8 +2,6 @@
 
 - `sudo docker-compose build` - Constrói a imagem do projeto atual
 
-- `sudo docker-compose run web rake db:create` - Cria a database
-
 - `sudo docker-compose up -d` - Subindo a aplicação, -d é para rodar em background
 
 - Acesse `http://localhost:3000`

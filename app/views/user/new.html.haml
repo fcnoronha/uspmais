@@ -1,3 +1,6 @@
+- if @errors
+  = @errors
+
 %h1 Criação de usuario
 = form_with scope: :user, url: '/user', local: true  do |f|
   = f.label :nome

@@ -8,8 +8,13 @@ class UserController < ApplicationController
       # Parameter that are obligatory to be passed and the ones that are optional
       @user = User.new(user_params)
 
-      @user.save!
-      redirect_to @user
+      if @user.save
+        redirect_to @user
+        return
+      end
+
+      @errors = @user.errors.full_messages
+      render :new # views/new.html.haml
   end
 
   # Showed when user is created
