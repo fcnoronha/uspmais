@@ -1,5 +1,5 @@
 %h1 Criação de usuario
-= form_with scope: :user, url: new_user_path, local: true  do |f|
+= form_with scope: :user, url: '/user', local: true  do |f|
   = f.label :nome
   = f.text_field :nome
   %br

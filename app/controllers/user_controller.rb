@@ -6,12 +6,9 @@ class UserController < ApplicationController
   def create
 
       # Parameter that are obligatory to be passed and the ones that are optional
-      @user = User.new(
-               params
-               .require(:nome, :email, :instituto, :curso, :info)
-               .permit(:link_site, :link_fb, :link_tt))
+      @user = User.new(user_params)
 
-      @user.save
+      @user.save!
       redirect_to @user
   end
 
@@ -19,5 +16,21 @@ class UserController < ApplicationController
   def show
     @user = User.find(params[:id])
   end
+
+  private
+
+  def user_params
+      params
+      .require(:user) # filters
+      .permit(:nome,
+              :email,
+              :instituto,
+              :curso,
+              :info,
+              :link_site,
+              :link_fb,
+              :link_tt)
+  end
+
 
 end
