@@ -12,6 +12,5 @@ Rails.application.routes.draw do
   # Its a vision to application root
   # get '/', to 'user#index' (Same as bellow)
   root 'user#index'
-  root 'org#index'
 
 end

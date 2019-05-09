@@ -1,0 +1,35 @@
+- if @errors
+  = @errors
+
+%h1 Criação de usuario
+= form_with scope: :org, url: '/org', local: true  do |f|
+  = f.label :nome
+  = f.text_field :nome
+  %br
+  = f.label :email
+  = f.email_field :email
+  %br
+  = f.label :instituto
+  = f.text_field :instituto
+  %br
+  = f.label :foto
+  = f.url_field :foto
+  /= f.submit 'Submit', :foto => "form_submit"
+  %br
+  = f.label :curso
+  = f.text_field :curso
+  %br
+  = f.label :info
+  = f.text_field :info
+  %br
+  = f.label :link_site
+  = f.text_field :link_site
+  %br
+  = f.label :link_fb
+  = f.text_field :link_fb
+  %br
+  = f.label :link_tt
+  = f.text_field :link_tt
+  %br
+  = f.submit
+%p Find me in app/views/org/new.html.haml
