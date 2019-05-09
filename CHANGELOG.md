@@ -12,10 +12,10 @@ Model: <date> - <who> list_of_changes
 ## 09/05 Grupo
     - Criamos tabela de organinação e definimos tabelas 1:n
     - Executamos:
-    
+
         bin/rails g controller Org
 
-        bin/rails g model Org
+        bin/rails g model Org index
 
         rake db:migrate
 
