@@ -6,6 +6,7 @@ Rails.application.routes.draw do
 
   # Automatically defining basic routes for user
   resources :user
+  resources :org
 
   # Its a vision to application root
   # get '/', to 'user#index' (Same as bellow)

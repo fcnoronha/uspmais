@@ -1,19 +1,39 @@
-
-USUARIO_TABLE
-	id_user (PK)
+ORG
+	id_org (PK)
 	nome
 	email
 	foto
-	instituto 
+	instituto
 	curso
 	info
-	is_user
 	link_site
 	link_fb
 	link_tt
-	is_org
-	lista_emails (Lista de emails que iam recebem notificações)
-	tags
+	TEM -> tags
+
+ORG_EVENTO (Uma org cede muitos eventos)
+	id_org (Foreign Key)
+	id_evento (FK)
+
+USUARIO
+	id_user (Primary Key)
+	nome
+	email
+	instituto
+	curso
+	info
+	link_site
+	link_fb
+	link_tt
+	TEM -> tags
+
+USER_ASSINA_EVENTO (Um usuario pode assinar/followar varios eventos)
+	id_user
+	id_evento
+
+USER_ASSINA_ORG
+	id_user
+	id_org
 
 EVENTOS
 	id_evento (PK)
@@ -27,20 +47,6 @@ EVENTOS
 	cnt_eu_vou
 	cnt_eu_quero
 	lista_emails (Lista de emails que iam receber notificações)
-	tags (atribuidas pelos usuario + instituto, nome e curso)
-	
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+	TEM -> tags
+	TEM ASSINANTES -> users
+	SAO CEDIDOS POR -> orgs
