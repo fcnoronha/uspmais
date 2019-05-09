@@ -11,9 +11,9 @@
   %br
   = f.label :instituto
   = f.text_field :instituto
-  %br
-  = f.label :foto
-  = f.url_field :foto
+  /%br
+  /= f.label :foto
+  /= f.url_field :foto
   /= f.submit 'Submit', :foto => "form_submit"
   %br
   = f.label :curso
@@ -23,13 +23,13 @@
   = f.text_field :info
   %br
   = f.label :link_site
-  = f.text_field :link_site
+  = f.url_field :link_site
   %br
   = f.label :link_fb
-  = f.text_field :link_fb
+  = f.url_field :link_fb
   %br
   = f.label :link_tt
-  = f.text_field :link_tt
+  = f.url_field :link_tt
   %br
   = f.submit
 %p Find me in app/views/org/new.html.haml

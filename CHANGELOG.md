@@ -11,6 +11,8 @@ Model: <date> - <who> list_of_changes
 
 ## 09/05 Grupo
     - Criamos tabela de organinação e definimos tabelas 1:n
+    - Criamos Views de organização para criação uma nova org
+    - Criamos Controller para organização
     - Executamos:
 
         bin/rails g controller Org
