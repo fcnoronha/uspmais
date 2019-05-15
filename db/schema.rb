@@ -21,6 +21,7 @@ ActiveRecord::Schema.define(version: 2019_05_09_184349) do
     t.integer "id_org"
     t.string "nome"
     t.string "email"
+    t.binary "foto"
     t.string "instituto"
     t.string "curso"
     t.string "info"
