@@ -2,6 +2,10 @@ class UserController < ApplicationController
   def index
   end
 
+  def new
+    @user = User.new
+  end
+
   # Defining function of the controller
   def create
 
@@ -9,12 +13,14 @@ class UserController < ApplicationController
       @user = User.new(user_params)
 
       if @user.save
+        flash[:success] = "Cadastro realizado com sucesso!"
         redirect_to @user
-        return
+      else
+        render :new
       end
 
-      @errors = @user.errors.full_messages
-      render :new # views/new.html.haml
+      #@errors = @user.errors.full_messages
+      #render :new # views/new.html.haml
   end
 
   # Showed when user is created

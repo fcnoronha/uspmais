@@ -20,4 +20,7 @@
 
     </br>
   %body
+    .container
+      - flash.each do |message_type, message|
+        %div{:class => "alert alert-#{message_type}"}= message
     = yield

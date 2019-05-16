@@ -28,3 +28,14 @@ Model: <date> - <who> list_of_changes
 - Adicionei a coluna `id` na tabela user, vai ser usado para login e outras coisas. Ideias para a tabela foram abstraidas [daqui](https://www.railstutorial.org/book/modeling_users#sec-creating_and_authenticating_a_user).
 
 - [Segui este tutorial](https://www.railstutorial.org/book/modeling_users#sec-creating_and_authenticating_a_user) para fazer o hashing da senha, criando uma nova coluna na tabela user, para armazenar este hash.
+
+## 16/05 Felipe
+
+- [Segui este tutorial](https://www.railstutorial.org/book/sign_up) para fazer a criação de um usuário. Ademais, fiz varias alterações no forme de criação de usuário, são elas:
+
+    1. Criação de um css para os forms, que deixam as coisas mais bonitas.
+    2. Fazer com que uma falha na criação de usuário seja mostrada de forma mais clara, para isso, criei uma nova pasta em views, /shared.
+    3. Criação da view `/shared/_error_messages.html.haml/` que realiza a amostragem de erros durante a criação de um usuario.
+    4. Reorganizei o `user_controler`.
+    5. Agora, temos uma validação bonita e elegante, de campos, durante a criação de usuario.
+    6. Tambem defini uma flash, uma mensagem que aparece na proxima pagina falando que a criação foi bem sucessida 
