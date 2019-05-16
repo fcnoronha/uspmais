@@ -38,4 +38,13 @@ Model: <date> - <who> list_of_changes
     3. Criação da view `/shared/_error_messages.html.haml/` que realiza a amostragem de erros durante a criação de um usuario.
     4. Reorganizei o `user_controler`.
     5. Agora, temos uma validação bonita e elegante, de campos, durante a criação de usuario.
-    6. Tambem defini uma flash, uma mensagem que aparece na proxima pagina falando que a criação foi bem sucessida 
+    6. Tambem defini uma flash, uma mensagem que aparece na proxima pagina falando que a criação foi bem sucessida.
+
+- Seguindo adiante, [usei este tutorial](https://www.railstutorial.org/book/basic_login) para fazer o login do usuario, isto é, inicio de uma autenticação com um dado email e uma dada senha. Para isso, fiz os seguintes passos:
+
+    1. Criei um novo modelo para a sessão `rails generate controller Session new`
+    2. Criei a pagina de login a `session/new`
+    3. Alterei o controler da sessao.
+    4. Criação de metodos em `session_helper.rb`, que vão ser utilizado por varias partes do programa.
+    5. Atualização do header para comportamento diferente caso o usuário esteja logado.
+    6. Falta consertar o erro para login

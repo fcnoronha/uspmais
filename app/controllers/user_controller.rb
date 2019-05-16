@@ -13,6 +13,7 @@ class UserController < ApplicationController
       @user = User.new(user_params)
 
       if @user.save
+        log_in @user
         flash[:success] = "Cadastro realizado com sucesso!"
         redirect_to @user
       else
