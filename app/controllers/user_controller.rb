@@ -34,7 +34,8 @@ class UserController < ApplicationController
               :info,
               :link_site,
               :link_fb,
-              :link_tt)
+              :link_tt,
+              :password)
   end
 
 

@@ -68,3 +68,6 @@ gem 'haml-rails', :group => 'development'
 
 # For us to use bootstrap (pages header)
 gem 'bootstrap-sass', '3.3.7'
+
+# Password hashing
+gem 'bcrypt', '3.1.12'
