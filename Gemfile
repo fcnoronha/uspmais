@@ -65,3 +65,6 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 # Change use of erb to haml
 gem 'haml'
 gem 'haml-rails', :group => 'development'
+
+# For us to use bootstrap (pages header)
+gem 'bootstrap-sass', '3.3.7'
