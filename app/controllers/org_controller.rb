@@ -1,5 +1,9 @@
 class OrgController < ApplicationController
 
+    def index
+         @orgs = Org.all
+    end
+
   def create
 
       # Parameter that are obligatory to be passed and the ones that are optional
@@ -17,8 +21,8 @@ class OrgController < ApplicationController
   # Showed when user is created
   def show
     @org = Org.find(params[:id])
-  end  
-
+  end
+  
   private
 
     def org_params
