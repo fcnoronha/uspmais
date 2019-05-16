@@ -10,4 +10,7 @@ class User < ApplicationRecord
 
     has_many :follows
     has_many :orgs, through: :follows
+
+    has_many :subscribeds
+    has_many :events, :through => :subscribeds
 end
