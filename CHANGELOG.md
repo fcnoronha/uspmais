@@ -23,3 +23,7 @@ Model: <date> - <who> list_of_changes
 
 ## 15/05 Felipe
     - Criei uma header inicial. Para isso, usei a gema `bootstrap_scss`, e segui [este tutorial](https://www.railstutorial.org/book/filling_in_the_layout). Coloquei acesso para criação de usuario e para a pagina inicial. Ademais, mechi no arquivo `app/views/application.html.haml`, que é uma pagina que esta em toda pagina da aplicação, assim, colocando o header apenas nela, terei um header em toda outra pagina do projeto.
+
+## 16/05 Dani
+    - Mudei o show da ORG, agora esse view exibe o perfil da ORG em si
+    
