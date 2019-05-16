@@ -7,4 +7,7 @@ class User < ApplicationRecord
     # validates :link_site
     # validates :link_fb
     # validates :link_tt
+
+    has_many :follows
+    has_many :orgs, through: :follows
 end
