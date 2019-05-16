@@ -22,6 +22,4 @@ Model: <date> - <who> list_of_changes
         rails generate migration add_column_to_org id_org:integer nome:string email:string foto:blob instituto:string curso:string info:string link_site:string link_fb:string link_tt:string
 
 ## 15/05 Felipe
-    - Coloquei links para outras paginas na /index;
-    - Criei um principio de header, ideia para ser trabalhada mais a frente;
-    -
+    - Criei uma header inicial. Para isso, usei a gema `bootstrap_scss`, e segui [este tutorial](https://www.railstutorial.org/book/filling_in_the_layout). Coloquei acesso para criação de usuario e para a pagina inicial. Ademais, mechi no arquivo `app/views/application.html.haml`, que é uma pagina que esta em toda pagina da aplicação, assim, colocando o header apenas nela, terei um header em toda outra pagina do projeto.
