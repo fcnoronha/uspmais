@@ -1,4 +1,32 @@
 %h1 Pronto!
 %p
+  NOME:
   %i= @org.nome
-  cadastrado com sucesso!
+  %br
+  EMAIL:
+  %i= @org.email
+  %br
+  -#FOTO:
+  -#%i= @org.foto
+  -#br
+  INSTITUTO:
+  %i= @org.instituto
+  %br
+  CURSO:
+  %i= @org.curso
+  %br
+  INFO:
+  %i= @org.info
+  %br
+  - if @org.link_site.nil?
+    SITE:
+    %i= @org.link_site
+    %br
+  - if @org.link_fb.nil?
+    FACEBOOK:
+    %i= @org.link_fb
+    %br
+  - if @org.link_tt.nil?
+    TWITTER:
+    %i= @org.link_tt
+    %br
