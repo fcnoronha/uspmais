@@ -5,31 +5,40 @@
   %head
     %title Criar usuário
 
-%h1 Criação de usuário
-= form_with scope: :user, url: '/user', local: true  do |f|
-  = f.label :nome
-  = f.text_field :nome
-  %br
-  = f.label :email
-  = f.email_field :email
-  %br
-  = f.label :instituto
-  = f.text_field :instituto
-  %br
-  = f.label :curso
-  = f.text_field :curso
-  %br
-  = f.label :info
-  = f.text_field :info
-  %br
-  = f.label :link_site
-  = f.url_field :link_site
-  %br
-  = f.label :link_fb
-  = f.url_field :link_fb
-  %br
-  = f.label :link_tt
-  = f.url_field :link_tt
-  %br
-  = f.submit
+%h1 Criação de usuario
+.row
+  .col-md-6.col-md-offset-3
+    = form_with scope: :user, url: '/user', local: true  do |f|
+
+      = render 'shared/error_messages'
+
+      = f.label :nome
+      = f.text_field :nome, class: 'form-control'
+      %br
+      = f.label :email
+      = f.email_field :email, class: 'form-control'
+      %br
+      = f.label :instituto
+      = f.text_field :instituto, class: 'form-control'
+      %br
+      = f.label :curso
+      = f.text_field :curso, class: 'form-control'
+      %br
+      = f.label :info
+      = f.text_field :info, class: 'form-control'
+      %br
+      = f.label :link_site
+      = f.url_field :link_site, class: 'form-control'
+      %br
+      = f.label :link_fb
+      = f.url_field :link_fb, class: 'form-control'
+      %br
+      = f.label :link_tt
+      = f.url_field :link_tt, class: 'form-control'
+      %br
+      = f.label :password
+      = f.password_field :password, class: 'form-control'
+      %br
+      = f.submit "Criar usuario", class: "btn btn-primary"
+
 %p Find me in app/views/user/new.html.haml
