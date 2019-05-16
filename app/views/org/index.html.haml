@@ -9,6 +9,11 @@
       %td= o.nome
       %td= o.info
       %td
+        = link_to t(:edit), edit_org_path(o)
+      %td
+        = link_to t(:delete), org_path(o), method: :delete,
+      data: {confirm: t('sure')}
+      %td
         = link_to t(:show), org_path(o)
 = link_to t(:back), new_org_path
 %p Find me in app/views/org/index.html.haml
