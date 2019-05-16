@@ -9,4 +9,7 @@ class Org < ApplicationRecord
     has_many :follows
     has_many :users, :through => :follows
 
+    has_many :hosts
+    has_many :events, :through => :hosts
+
 end

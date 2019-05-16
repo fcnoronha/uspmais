@@ -33,7 +33,9 @@ class EventController < ApplicationController
                 :foto,
                 :local,
                 :date,
-                :time)
+                :time,
+                org_ids: [],
+                user_ids: [])
     end
 
 end

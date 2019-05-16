@@ -96,3 +96,10 @@ Model: <date> - <who> list_of_changes
 
     rake db:migrate
 
+    - Criaçao da relaçao entre as tabelas "user" e "event", chamada de "subscribed", bem como a relaçao entre as tabelas "org" e "event", chamada de "host"
+
+    - Executei:
+        rails g model Subscribed user:references event:references
+        rails g model Host org:references event:references
+    - Modifiquei os models do user, org, event
+    - Modifiquei o controller do event
