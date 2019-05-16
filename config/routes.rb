@@ -1,10 +1,10 @@
 Rails.application.routes.draw do
 
-
   # get 'user/index', to 'user#index' (Same as bellow)
   get 'user/index'
   get 'org/index'
   get 'event/index'
+  get 'session/new'
 
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 
@@ -16,5 +16,10 @@ Rails.application.routes.draw do
   # Its a vision to application root
   # get '/', to 'user#index' (Same as bellow)
   root 'user#index'
+
+  # Login routes
+  get    '/login',   to: 'sessions#new'
+  post   '/login',   to: 'sessions#create'
+  delete '/logout',  to: 'sessions#destroy'
 
 end

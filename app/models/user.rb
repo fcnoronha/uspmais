@@ -1,4 +1,8 @@
 class User < ApplicationRecord
+
+    # Putting email in lowercasse
+    before_save { self.email = email.downcase }
+
     validates :nome, presence: true, length: { in: 3..100 }
     validates :email, presence: true, length: { maximum: 200 }, uniqueness: true
     validates :instituto, presence: true
@@ -13,4 +17,14 @@ class User < ApplicationRecord
 
     has_many :subscribeds
     has_many :events, :through => :subscribeds
+
+    has_secure_password
+    validates :password, presence: true, length: { minimum: 6 }
+
+    # Returns the hash digest of the given string.
+    def User.digest(string)
+        cost = ActiveModel::SecurePassword.min_cost ? BCrypt::Engine::MIN_COST :
+                BCrypt::Engine.cost
+                BCrypt::Password.create(string, cost: cost)
+  end
 end
