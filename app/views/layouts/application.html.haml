@@ -1,11 +1,23 @@
+%p
+  Finge que tem um header aqui (estou em view/layout/application.html.haml)
+
 !!!
 %html
   %head
     %meta{:content => "text/html; charset=UTF-8", "http-equiv" => "Content-Type"}/
-    %title Uspmais
     = csrf_meta_tags
     = csp_meta_tag
     = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload'
     = javascript_include_tag 'application', 'data-turbolinks-track': 'reload'
+
+    %header.navbar.navbar-fixed-top.navbar-inverse
+      .container
+        = link_to "USPMais", root_path, id: "logo"
+        %nav
+          %ul.nav.navbar-nav.navbar-right
+            %li= link_to "Criar usuário", new_user_path
+            %li= link_to "Log in", '#'
+
+    </br>
   %body
     = yield
