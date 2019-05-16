@@ -6,4 +6,7 @@ class Org < ApplicationRecord
     validates :curso, presence: true
     validates :info, presence: true, length: { maximum: 1000 }
 
+    has_many :follows
+    has_many :users, :through => :follows
+
 end
