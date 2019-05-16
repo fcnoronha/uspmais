@@ -11,6 +11,9 @@ class User < ApplicationRecord
     # validates :link_site
     # validates :link_fb
     # validates :link_tt
+    has_many :follows
+    has_many :orgs, through: :follows
+
 
     has_secure_password
     validates :password, presence: true, length: { minimum: 6 }
@@ -21,4 +24,5 @@ class User < ApplicationRecord
                 BCrypt::Engine.cost
                 BCrypt::Password.create(string, cost: cost)
   end
+
 end

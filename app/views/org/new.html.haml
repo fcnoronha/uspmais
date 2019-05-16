@@ -1,7 +1,8 @@
 - if @errors
   = @errors
 
-%h1 Criação de usuario
+
+%h1 Criação de organização
 = form_with scope: :org, url: '/org', local: true  do |f|
   = f.label :nome
   = f.text_field :nome

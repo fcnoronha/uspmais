@@ -1,0 +1,26 @@
+- if @errors
+  = @errors
+
+%h1 Criação de evento
+= form_with scope: :event, url: '/event', local: true  do |f|
+  = f.label :nome
+  = f.text_field :nome
+  /%br
+  /= f.label :foto
+  /= f.url_field :foto
+  /= f.submit 'Submit', :foto => "form_submit"
+  %br
+  = f.label :info
+  = f.text_field :info
+  %br
+  = f.label :local
+  = f.text_field :local
+  %br
+  = f.label :date
+  = f.date_field :date
+  %br
+  = f.label :time
+  = f.time_field :time
+  %br
+  = f.submit
+%p Find me in app/views/event/new.html.haml

@@ -42,7 +42,9 @@ class UserController < ApplicationController
               :link_site,
               :link_fb,
               :link_tt,
-              :password)
+              :password,
+              org_ids: [])
+
   end
 
 

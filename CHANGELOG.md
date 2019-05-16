@@ -13,13 +13,38 @@ Model: <date> - <who> list_of_changes
     - Criamos tabela de organinação e definimos tabelas 1:n
     - Executamos:
 
-        bin/rails g controller Org
+        bin/rails g controller Org index
 
         bin/rails g model Org
 
         rake db:migrate
 
         rails generate migration add_column_to_org id_org:integer nome:string email:string foto:blob instituto:string curso:string info:string link_site:string link_fb:string link_tt:string
+
+
+## 15/05 Dani
+    - Criaçao da relaçao entre as tabelas "user" e "org", chamada de "follows"
+
+    - Executei:
+        rails g model Follow user:references org:references
+    - Modifiquei os models do user, org e follow    
+    - Modifiquei o controller do user
+
+    - Divirta-se criando uma relaçao:
+        - Abra o localhost:3000 e crie um user e uma org
+        - Dentro do terminalzinho do docker, faça o seguinte:
+            rails c
+            User.all
+            Org.all
+            meu_user = User.find(1)
+            minha_org = Org.find(1)
+            meu_follow = Follow.new
+            meu_follow.user = meu_user
+            meu_follow.org = minha_org
+            meu_follow.save
+            meu_follow
+        - Ainda no rails c, veja como e facil ver, por exemplo, todos os users relacionados a uma determinada org:
+            Follow.where(org:minha_org)    
 
 ## 15/05 Felipe
 
@@ -30,6 +55,8 @@ Model: <date> - <who> list_of_changes
 - [Segui este tutorial](https://www.railstutorial.org/book/modeling_users#sec-creating_and_authenticating_a_user) para fazer o hashing da senha, criando uma nova coluna na tabela user, para armazenar este hash.
 
 ## 16/05 Felipe
+
+- Criei uma header inicial. Para isso, usei a gema `bootstrap_scss`, e segui [este tutorial](https://www.railstutorial.org/book/filling_in_the_layout). Coloquei acesso para criação de usuario e para a pagina inicial. Ademais, mechi no arquivo `app/views/application.html.haml`, que é uma pagina que esta em toda pagina da aplicação, assim, colocando o header apenas nela, terei um header em toda outra pagina do projeto.
 
 - [Segui este tutorial](https://www.railstutorial.org/book/sign_up) para fazer a criação de um usuário. Ademais, fiz varias alterações no forme de criação de usuário, são elas:
 
@@ -48,3 +75,24 @@ Model: <date> - <who> list_of_changes
     4. Criação de metodos em `session_helper.rb`, que vão ser utilizado por varias partes do programa.
     5. Atualização do header para comportamento diferente caso o usuário esteja logado.
     6. Falta consertar o erro para login
+    
+
+## 16/05 Dani
+    - Mudei o show da ORG, agora esse view exibe o perfil da ORG em si
+    - Mudei o show do EVENT, agora esse view exibe as informações do EVENT em si
+   
+
+## 16/05 Rodrigo
+    -Tabela Event criada
+    -Executei:
+
+    bin/rails g controller Event index
+
+    bin/rails g model Event
+
+    rake db:migrate
+
+    rails generate migration add_column_to_event id_event:integer nome:string foto:binary info:string local:string date:integer time:integer
+
+    rake db:migrate
+

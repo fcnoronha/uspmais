@@ -1,14 +1,17 @@
 Rails.application.routes.draw do
 
-  get 'session/new'
   # get 'user/index', to 'user#index' (Same as bellow)
   get 'user/index'
   get 'org/index'
+  get 'event/index'
+  get 'session/new'
+
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 
   # Automatically defining basic routes for user
   resources :user
   resources :org
+  resources :event
 
   # Its a vision to application root
   # get '/', to 'user#index' (Same as bellow)
