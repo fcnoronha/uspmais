@@ -1,8 +1,8 @@
 class OrgController < ApplicationController
 
-    def index
-         @orgs = Org.all
-    end
+  def index
+    @orgs = Org.all
+  end
 
   def create
 
