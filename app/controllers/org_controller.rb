@@ -18,6 +18,24 @@ class OrgController < ApplicationController
       render :new # views/new.html.haml
   end
 
+  def edit
+    @org = Org.find(params[:id])
+  end
+
+  # Update the database
+  def update
+
+    @org = Org.find(params[:id])
+
+    if @org.update_attributes(org_params)  
+      # Handle a successful update.
+      redirect_to @org
+        
+    else
+      render 'edit'
+    end
+  end
+
   # Showed when user is created
   def show
     @org = Org.find(params[:id])

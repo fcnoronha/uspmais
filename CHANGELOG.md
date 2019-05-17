@@ -3,6 +3,7 @@
 Model: <date> - <who> list_of_changes
 
 ## 05/05 Felipe
+
     - Criação do CHANGELOG
     - A partir de agora, os comandos foram realizados no shell do docker
     - Gerando modelo para usuario com `bin/rails g model User id_user:primary_key nome:string email:string instituto:string curso:string info:string is_user:boolean link_site:string link_fb:string link_tt:string is_org:boolean lista_`emails:string tags:string`
@@ -10,6 +11,7 @@ Model: <date> - <who> list_of_changes
     - Pagina para criação de usuário
 
 ## 09/05 Grupo
+
     - Criamos tabela de organinação e definimos tabelas 1:n
     - Executamos:
 
@@ -21,13 +23,13 @@ Model: <date> - <who> list_of_changes
 
         rails generate migration add_column_to_org id_org:integer nome:string email:string foto:blob instituto:string curso:string info:string link_site:string link_fb:string link_tt:string
 
-
 ## 15/05 Dani
+
     - Criaçao da relaçao entre as tabelas "user" e "org", chamada de "follows"
 
     - Executei:
         rails g model Follow user:references org:references
-    - Modifiquei os models do user, org e follow    
+    - Modifiquei os models do user, org e follow
     - Modifiquei o controller do user
 
     - Divirta-se criando uma relaçao:
@@ -44,7 +46,7 @@ Model: <date> - <who> list_of_changes
             meu_follow.save
             meu_follow
         - Ainda no rails c, veja como e facil ver, por exemplo, todos os users relacionados a uma determinada org:
-            Follow.where(org:minha_org)    
+            Follow.where(org:minha_org)
 
 ## 15/05 Felipe
 
@@ -75,17 +77,17 @@ Model: <date> - <who> list_of_changes
     4. Criação de metodos em `session_helper.rb`, que vão ser utilizado por varias partes do programa.
     5. Atualização do header para comportamento diferente caso o usuário esteja logado.
     6. Falta consertar o erro para login
-    
 
 ## 16/05 Dani
+
     - Mudei o show da ORG, agora esse view exibe o perfil da ORG em si
     - Mudei o show do EVENT, agora esse view exibe as informações do EVENT em si
-   
 
 ## 16/05 Rodrigo
-    -Tabela Event criada
-    -Executei:
 
+- Tabela Event criada
+
+-Executei:
     bin/rails g controller Event index
 
     bin/rails g model Event
@@ -96,10 +98,25 @@ Model: <date> - <who> list_of_changes
 
     rake db:migrate
 
-    - Criaçao da relaçao entre as tabelas "user" e "event", chamada de "subscribed", bem como a relaçao entre as tabelas "org" e "event", chamada de "host"
+- Criaçao da relaçao entre as tabelas "user" e "event", chamada de "subscribed", bem como a relaçao entre as tabelas "org" e "event", chamada de "host"
 
-    - Executei:
-        rails g model Subscribed user:references event:references
-        rails g model Host org:references event:references
-    - Modifiquei os models do user, org, event
-    - Modifiquei o controller do event
+- Executei:
+    rails g model Subscribed user:references event:references
+
+    rails g model Host org:references event:references
+
+- Modifiquei os models do user, org, event
+
+- Modifiquei o controller do event
+
+## 17/05 Rodrigo
+
+- Adição da feature "edit":
+
+    - Criação da feature "edit" para org
+        1. Adicionei o action edit no org controller;
+        2. Adicionei o action update no org controller;
+        3. View org/[:id]/edit criada;
+        4. View org/index modificada -> adição do link edit
+
+    - [Fonte](https://www.railstutorial.org/book/updating_and_deleting_users)
