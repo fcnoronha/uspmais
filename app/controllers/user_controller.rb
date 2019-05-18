@@ -33,10 +33,10 @@ class UserController < ApplicationController
 
     @user = User.find(params[:id])
 
-    if @user.update_attributes(user_params)  
+    if @user.update_attributes(user_params)
       # Handle a successful update.
       redirect_to @user
-        
+
     else
       render 'edit'
     end
@@ -61,6 +61,7 @@ class UserController < ApplicationController
               :link_fb,
               :link_tt,
               :password,
+              :password_confirmation,
               org_ids: [])
 
   end
