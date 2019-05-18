@@ -133,8 +133,9 @@ Model: <date> - <who> list_of_changes
         2. Adicionei o action update no user controller;
         3. View user/[:id]/edit criada;
         4. View user/index modificada -> adição do link edit
+   
+    - Feature delete adicionada em /org, /event e /user;
 
-    - Feature delete adicionada em /org, /event
 
     - [Fonte](https://www.railstutorial.org/book/updating_and_deleting_users)
 
