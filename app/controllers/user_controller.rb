@@ -2,6 +2,10 @@ class UserController < ApplicationController
   def index
   end
 
+  def new
+    @user = User.new
+  end
+
   # Defining function of the controller
   def create
 
@@ -9,12 +13,33 @@ class UserController < ApplicationController
       @user = User.new(user_params)
 
       if @user.save
+        log_in @user
+        flash[:success] = "Cadastro realizado com sucesso!"
         redirect_to @user
-        return
+      else
+        render :new
       end
 
-      @errors = @user.errors.full_messages
-      render :new # views/new.html.haml
+      #@errors = @user.errors.full_messages
+      #render :new # views/new.html.haml
+  end
+
+  def edit
+    @user = User.find(params[:id])
+  end
+
+  # Update the database
+  def update
+
+    @user = User.find(params[:id])
+
+    if @user.update_attributes(user_params)
+      # Handle a successful update.
+      redirect_to @user
+
+    else
+      render 'edit'
+    end
   end
 
   # Showed when user is created
@@ -35,7 +60,10 @@ class UserController < ApplicationController
               :link_site,
               :link_fb,
               :link_tt,
+              :password,
+              :password_confirmation,
               org_ids: [])
+
   end
 
 

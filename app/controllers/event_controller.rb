@@ -1,7 +1,7 @@
 class EventController < ApplicationController
 
   def index
-       @events = Event.all
+    @events = Event.all
   end
 
   def create
@@ -17,6 +17,25 @@ class EventController < ApplicationController
       @errors = @event.errors.full_messages
       render :new # views/new.html.haml
   end
+
+  def edit
+    @event = Event.find(params[:id])
+  end
+
+  # Update the database
+  def update
+
+    @event = Event.find(params[:id])
+
+    if @event.update_attributes(event_params)  
+      # Handle a successful update.
+      redirect_to @event
+        
+    else
+      render 'edit'
+    end
+  end
+
 
   # Showed when user is created
   def show
@@ -39,7 +58,9 @@ class EventController < ApplicationController
                 :foto,
                 :local,
                 :date,
-                :time)
+                :time,
+                org_ids: [],
+                user_ids: [])
     end
 
 end

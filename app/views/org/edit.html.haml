@@ -3,15 +3,12 @@
 
 %html
   %head
-    %title Criar usuário
+    %title Editar Org
 
-%h1 Criação de usuario
+%h1 Edição de Org
 .row
   .col-md-6.col-md-offset-3
-    = form_with scope: :user, url: '/user', local: true  do |f|
-
-      = render 'shared/error_messages'
-
+    = form_with model: @org, local: true  do |f|
       = f.label :nome
       = f.text_field :nome, class: 'form-control'
       %br
@@ -20,6 +17,10 @@
       %br
       = f.label :instituto
       = f.text_field :instituto, class: 'form-control'
+      /%br
+      /= f.label :foto
+      /= f.url_field :foto, class: 'form-control'
+      /= f.submit 'Submit', :foto => "form_submit"
       %br
       = f.label :curso
       = f.text_field :curso, class: 'form-control'
@@ -36,11 +37,6 @@
       = f.label :link_tt
       = f.url_field :link_tt, class: 'form-control'
       %br
-      = f.label :password
-      = f.password_field :password, class: 'form-control'
-      %br
-      = f.label :password_confirmation
-      = f.password_field :password_confirmation, class: 'form-control'
+      = f.submit "Salvar mudanças", class: "btn btn-primary"
 
-      %br
-      = f.submit "Criar usuario", class: "btn btn-primary"
+%p Find me in app/views/org/[:id]/edit.html.haml

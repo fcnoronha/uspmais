@@ -3,12 +3,12 @@
 
 %html
   %head
-    %title Criar usuário
+    %title Editar usuário
 
-%h1 Criação de usuario
+%h1 Edição de usuario
 .row
   .col-md-6.col-md-offset-3
-    = form_with scope: :user, url: '/user', local: true  do |f|
+    = form_with model: @user, local: true  do |f|
 
       = render 'shared/error_messages'
 
@@ -39,8 +39,4 @@
       = f.label :password
       = f.password_field :password, class: 'form-control'
       %br
-      = f.label :password_confirmation
-      = f.password_field :password_confirmation, class: 'form-control'
-
-      %br
-      = f.submit "Criar usuario", class: "btn btn-primary"
+      = f.submit "Salvar Mudanças", class: "btn btn-primary"

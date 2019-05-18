@@ -1,16 +1,19 @@
 - if @errors
   = @errors
 
-%h1 Criação de evento
+%html
+  %head
+    %title Editar Evento
+
+%h1 Edição de Evento
 .row
   .col-md-6.col-md-offset-3
-    = form_with scope: :event, url: '/event', local: true  do |f|
-
+    = form_with model: @event, local: true  do |f|
       = f.label :nome
       = f.text_field :nome, class: 'form-control'
       /%br
       /= f.label :foto
-      /= f.url_field :foto
+      /= f.url_field :foto, class: 'form-control'
       /= f.submit 'Submit', :foto => "form_submit"
       %br
       = f.label :info
@@ -25,4 +28,4 @@
       = f.label :time
       = f.time_field :time, class: 'form-control'
       %br
-      = f.submit "Criar evento", class: "btn btn-primary"
+      = f.submit "Salvar mudanças", class: "btn btn-primary"
