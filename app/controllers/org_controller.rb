@@ -40,7 +40,13 @@ class OrgController < ApplicationController
   def show
     @org = Org.find(params[:id])
   end
-  
+
+  def destroy
+    @org = Org.find(params[:id])
+    @org.destroy
+    redirect_to org_index_path
+  end
+
   private
 
     def org_params

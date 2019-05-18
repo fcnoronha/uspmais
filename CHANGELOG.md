@@ -98,6 +98,7 @@ Model: <date> - <who> list_of_changes
 
     rake db:migrate
 
+
 - Criaçao da relaçao entre as tabelas "user" e "event", chamada de "subscribed", bem como a relaçao entre as tabelas "org" e "event", chamada de "host"
 
 - Executei:
@@ -130,6 +131,8 @@ Model: <date> - <who> list_of_changes
         2. Adicionei o action update no user controller;
         3. View user/[:id]/edit criada;
         4. View user/index modificada -> adição do link edit
+        
+    - Feature delete adicionada em /org, /event
 
     - [Fonte](https://www.railstutorial.org/book/updating_and_deleting_users)
 
