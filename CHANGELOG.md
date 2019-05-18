@@ -100,6 +100,7 @@ Model: <date> - <who> list_of_changes
 
     rake db:migrate
 
+
 - Criaçao da relaçao entre as tabelas "user" e "event", chamada de "subscribed", bem como a relaçao entre as tabelas "org" e "event", chamada de "host"
 
 - Executei:
@@ -133,6 +134,8 @@ Model: <date> - <who> list_of_changes
         3. View user/[:id]/edit criada;
         4. View user/index modificada -> adição do link edit
 
+    - Feature delete adicionada em /org, /event
+
     - [Fonte](https://www.railstutorial.org/book/updating_and_deleting_users)
 
 ## 17/05 Felipe
@@ -142,6 +145,7 @@ Model: <date> - <who> list_of_changes
     1. Ao criar um novo login, o usuario é logado no sistema automaticamente.
     2. É possivel realizar o login com o email e senha cadastrados.
     3. Ao realizar o login, as informações no header são alteradas.
+
 
 ## 17/05 Dani
 
@@ -180,3 +184,13 @@ criar uma nova, hosts, que ligasse user a events.
         rails g model Host event:references user:references
     - Modifiquei os models do user e event
     - Modifiquei o controller do event
+
+- Organizei a pagina como um todo, mais especificamente:
+
+    1. Adicionei um breve texto á pagina inicial.
+    2. Adicionei um footer nas paginas.
+    3. Organizei a visualização do usuário (link para perfil), para deixar mais agradavel.
+    4. Fiz com que o header tivesse um comportamento diferente quando um usuario é logado, assim, o botão 'criar usuario' da espaço ao botão 'criar evento'.
+    5. Finalmente, dei uma organizada geral (coisa estetica) nos formularios.
+
+- Adicionei um campo para o usuário ter uma confirmação de senha

@@ -1,15 +1,19 @@
-%h1 Organizaçoes cadastradas
-%table
-  %tr
-    %th Organizaçao
-    %th Info
-    %th
-  - @users.each do |us|
-    %tr
-      %td= us.nome
-      %td= us.info
-      %td
-        = link_to t(:show), user_path(us)
-        = link_to t(:edit), edit_user_path(us)
-= link_to t(:back), new_user_path
-%p Find me in app/views/user/index.html.haml
+%html
+  %head
+    %title USPMais - Inicio
+
+.col-md-10.col-md-offset-1
+  .center.jumbotron
+    %h1 Bem vindx ao USPMais, o maior e mais completo portal de eventos da Universidade de São Paulo
+
+  %p Aqui, você encontra informações sobre:
+  %ul
+    %li Atividades de atléticas;
+    %li Atividades de dança;
+    %li Grupos de extensão;
+    %li Feiras e exposições;
+    %li E muito mais!
+  %p
+    Para você que é organizador, oferecemos uma plataforma completa para a criação e gerenciamento de eventos.
+    = link_to "Crie uma conta e saiba mais!", new_user_path
+>>>>>>> master

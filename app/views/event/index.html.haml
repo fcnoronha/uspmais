@@ -9,7 +9,9 @@
       %td= ev.nome
       %td= ev.info
       %td
+        = link_to t(:delete), event_path(o), method: :delete,
+      data: {confirm: "Você tem certeza?"}
+      %td
         = link_to t(:show), event_path(ev)
         = link_to t(:edit), edit_org_path(ev)
 = link_to t(:back), new_event_path
-%p Find me in app/views/event/index.html.haml

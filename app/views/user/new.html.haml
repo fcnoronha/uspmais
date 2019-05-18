@@ -39,6 +39,8 @@
       = f.label :password
       = f.password_field :password, class: 'form-control'
       %br
-      = f.submit "Criar usuario", class: "btn btn-primary"
+      = f.label :password_confirmation
+      = f.password_field :password_confirmation, class: 'form-control'
 
-%p Find me in app/views/user/new.html.haml
+      %br
+      = f.submit "Criar usuario", class: "btn btn-primary"

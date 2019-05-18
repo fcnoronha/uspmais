@@ -64,7 +64,13 @@ class UserController < ApplicationController
               :link_site,
               :link_fb,
               :link_tt,
+<<<<<<< HEAD
               :password)
+=======
+              :password,
+              :password_confirmation,
+              org_ids: [])
+>>>>>>> master
 
   end
 
