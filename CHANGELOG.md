@@ -75,12 +75,12 @@ Model: <date> - <who> list_of_changes
     4. Criação de metodos em `session_helper.rb`, que vão ser utilizado por varias partes do programa.
     5. Atualização do header para comportamento diferente caso o usuário esteja logado.
     6. Falta consertar o erro para login
-    
+
 
 ## 16/05 Dani
     - Mudei o show da ORG, agora esse view exibe o perfil da ORG em si
     - Mudei o show do EVENT, agora esse view exibe as informações do EVENT em si
-   
+
 
 ## 16/05 Rodrigo
     -Tabela Event criada
@@ -103,3 +103,11 @@ Model: <date> - <who> list_of_changes
         rails g model Host org:references event:references
     - Modifiquei os models do user, org, event
     - Modifiquei o controller do event
+
+## 17/05 Felipe
+
+- Arrumei o login, agora temos uma sessão funcional. QUe funciona da seguinte maneira:
+
+    1. Ao criar um novo login, o usuario é logado no sistema automaticamente.
+    2. É possivel realizar o login com o email e senha cadastrados.
+    3. Ao realizar o login, as informações no header são alteradas.

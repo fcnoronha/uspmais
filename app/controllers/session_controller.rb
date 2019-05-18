@@ -13,7 +13,6 @@ class SessionController < ApplicationController
             # Create an error message.
             flash.now[:danger] = 'Combinação email/senha invalida!'
             render 'new'
-        render 'new'
         end
     end
 
