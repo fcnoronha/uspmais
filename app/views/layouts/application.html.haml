@@ -15,7 +15,12 @@
         = link_to "USPMais", root_path, id: "logo"
         %nav
           %ul.nav.navbar-nav.navbar-right
-            %li= link_to "Criar usuário", new_user_path
+
+            - if logged_in?
+              %li= link_to "Criar evento", new_event_path
+            - else
+              %li= link_to "Criar usuário", new_user_path
+
             %li= link_to "Criar organização", new_org_path
 
             - if logged_in?
@@ -26,7 +31,7 @@
                   %b.caret
                 %ul.dropdown-menu
                   %li= link_to "Profile", current_user
-                  %li= link_to "Configurações", '#'
+                  %li= link_to "Editar", '#'
                   %li.divider
                   %li
                     = link_to "Log out", logout_path, method: :delete
@@ -36,7 +41,17 @@
 
     </br>
   %body
+    = yield
+
     .container
       - flash.each do |message_type, message|
         %div{:class => "alert alert-#{message_type}"}= message
-    = yield
+
+    .container
+      %footer.footer
+        %small
+          USPMais - Eventos e universidade
+        %nav
+          %ul
+            %li= link_to "Sobre nós",   '#'
+            %li= link_to "Github", 'http://github.com/mrfelipenoronha/uspmais'

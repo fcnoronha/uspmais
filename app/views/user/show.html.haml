@@ -1,4 +1,11 @@
-%h1 Pronto!
-%p
+%h1
   %i= @user.nome
-  cadastrado com sucesso!
+
+.row
+  .col-md-8.col-md-offset-2
+    %p
+      Nome:
+      = @user.nome
+    %p
+      Email:
+      = @user.email

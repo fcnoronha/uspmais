@@ -140,3 +140,11 @@ Model: <date> - <who> list_of_changes
     1. Ao criar um novo login, o usuario é logado no sistema automaticamente.
     2. É possivel realizar o login com o email e senha cadastrados.
     3. Ao realizar o login, as informações no header são alteradas.
+
+- Organizei a pagina como um todo, mais especificamente:
+
+    1. Adicionei um breve texto á pagina inicial.
+    2. Adicionei um footer nas paginas.
+    3. Organizei a visualização do usuário (link para perfil), para deixar mais agradavel.
+    4. Fiz com que o header tivesse um comportamento diferente quando um usuario é logado, assim, o botão 'criar usuario' da espaço ao botão 'criar evento'.
+    5. Finalmente, dei uma organizada geral (coisa estetica) nos formularios.
