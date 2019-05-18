@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
 
+  get 'static_pages/home'
+  get 'static_pages/about'
   # get 'user/index', to 'user#index' (Same as bellow)
   get 'user/index'
   get 'org/index'
@@ -15,7 +17,7 @@ Rails.application.routes.draw do
 
   # Its a vision to application root
   # get '/', to 'user#index' (Same as bellow)
-  root 'user#index'
+  root 'static_pages#home'
 
   # Login routes
   get    '/login',   to: 'session#new'
