@@ -71,10 +71,7 @@ class UserController < ApplicationController
               :link_fb,
               :link_tt,
               :password,
-              :password_confirmation,
-              org_ids: [])
-
+              :password_confirmation)
   end
-
 
 end
