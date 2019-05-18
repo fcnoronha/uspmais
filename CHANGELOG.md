@@ -204,3 +204,7 @@ criar uma nova, hosts, que ligasse user a events.
 ## 18/05 Felipe
 
 - Arrumei as migrations da Dani, retirando coisas que nao eram mais necessárias
+- Gerei um novo controlador, executando `rails generate controller StaticPages home about`. Esse controlador vai lidar com as nossas paginas mais estaticas, como a home (inicial) e a about_us .
+- Arrumei o header, para que, quando o usuario esteja logado, o botao de editar da dropdown list redirecione para a edição dele.
+- Arrumei as rotas para as novas paginas.
+- Escrevi coisas na pagina sobre nos.
