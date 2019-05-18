@@ -149,7 +149,12 @@ Model: <date> - <who> list_of_changes
 
 - Organizei a pagina como um todo, mais especificamente:
 
-    1. Adicionei um breve texto á pagina inicial.
+    1. Adicionei um breve texto á pagina inicial.  {
+    title: "Uspmais"
+    paths: [
+      "/media/felipe/extd/Faculdade/3 semestre/MAC0218/uspmais"
+    ]
+  }
     2. Adicionei um footer nas paginas.
     3. Organizei a visualização do usuário (link para perfil), para deixar mais agradavel.
     4. Fiz com que o header tivesse um comportamento diferente quando um usuario é logado, assim, o botão 'criar usuario' da espaço ao botão 'criar evento'.
@@ -195,3 +200,7 @@ criar uma nova, hosts, que ligasse user a events.
     - Modifiquei o controller do event
 
 - Criei um arquivo provisorio "user/profile.html.haml". A ideia e que o codigo dele deve ir para o user/show.html.haml eventualmente. E o codigo que esta em user/show.html.haml deveria estar em um /index do proprio site, como uma pagina inicial (tambem provisoria, enquanto nao implementamos a pesquisa)
+
+## 18/05 Felipe
+
+- Arrumei as migrations da Dani, retirando coisas que nao eram mais necessárias
