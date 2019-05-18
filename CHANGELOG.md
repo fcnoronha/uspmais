@@ -133,7 +133,7 @@ Model: <date> - <who> list_of_changes
         2. Adicionei o action update no user controller;
         3. View user/[:id]/edit criada;
         4. View user/index modificada -> adição do link edit
-   
+
     - Feature delete adicionada em /org, /event e /user;
 
 
@@ -147,13 +147,21 @@ Model: <date> - <who> list_of_changes
     2. É possivel realizar o login com o email e senha cadastrados.
     3. Ao realizar o login, as informações no header são alteradas.
 
+- Organizei a pagina como um todo, mais especificamente:
+
+    1. Adicionei um breve texto á pagina inicial.
+    2. Adicionei um footer nas paginas.
+    3. Organizei a visualização do usuário (link para perfil), para deixar mais agradavel.
+    4. Fiz com que o header tivesse um comportamento diferente quando um usuario é logado, assim, o botão 'criar usuario' da espaço ao botão 'criar evento'.
+    5. Finalmente, dei uma organizada geral (coisa estetica) nos formularios.
+
+- Adicionei um campo para o usuário ter uma confirmação de senha    
+
 
 ## 17/05 Dani
 
-- Tomamos a decisao de excluir as orgs, transformando os users em organizaçoes.
-De agora em diante, quem tera login serao apenas os admins das organizaçoes.
-Quem quiser interagir com os eventos nao precisara fazer login, de modo que a plataforma
-passa a ser um mural para o uspiano (ou nao) comum.
+- Tomamos a decisao de excluir as orgs, transformando os users em organizaçoes. De agora em diante, quem tera login serao apenas os admins das organizaçoes.
+Quem quiser interagir com os eventos nao precisara fazer login, de modo que a plataforma passa a ser um mural para o uspiano (ou nao) comum.
 
 - Tive que reorganizar as tabelas de ligaçao (de references). Preferi excluir todas e
 criar uma nova, hosts, que ligasse user a events.
@@ -185,13 +193,3 @@ criar uma nova, hosts, que ligasse user a events.
         rails g model Host event:references user:references
     - Modifiquei os models do user e event
     - Modifiquei o controller do event
-
-- Organizei a pagina como um todo, mais especificamente:
-
-    1. Adicionei um breve texto á pagina inicial.
-    2. Adicionei um footer nas paginas.
-    3. Organizei a visualização do usuário (link para perfil), para deixar mais agradavel.
-    4. Fiz com que o header tivesse um comportamento diferente quando um usuario é logado, assim, o botão 'criar usuario' da espaço ao botão 'criar evento'.
-    5. Finalmente, dei uma organizada geral (coisa estetica) nos formularios.
-
-- Adicionei um campo para o usuário ter uma confirmação de senha
