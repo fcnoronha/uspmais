@@ -12,11 +12,8 @@ class User < ApplicationRecord
     # validates :link_fb
     # validates :link_tt
 
-    has_many :follows
-    has_many :orgs, through: :follows
-
-    has_many :subscribeds
-    has_many :events, :through => :subscribeds
+    has_many :hosts
+    has_many :events, :through => :hosts
 
     has_secure_password
     validates :password, presence: true, length: { minimum: 6 }
@@ -26,5 +23,5 @@ class User < ApplicationRecord
         cost = ActiveModel::SecurePassword.min_cost ? BCrypt::Engine::MIN_COST :
                 BCrypt::Engine.cost
                 BCrypt::Password.create(string, cost: cost)
-  end
+    end
 end

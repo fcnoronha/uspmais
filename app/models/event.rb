@@ -5,9 +5,6 @@ class Event < ApplicationRecord
     validates :time, presence: true
 
     has_many :hosts
-    has_many :orgs, :through => :hosts
-
-    has_many :subscribeds
-    has_many :users, :through => :subscribeds
+    has_many :users, through: :hosts
 
 end

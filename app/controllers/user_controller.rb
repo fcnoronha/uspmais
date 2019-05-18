@@ -6,6 +6,10 @@ class UserController < ApplicationController
     @user = User.new
   end
 
+  def index
+    @users = User.all
+  end
+
   # Defining function of the controller
   def create
 
@@ -66,9 +70,13 @@ class UserController < ApplicationController
               :link_site,
               :link_fb,
               :link_tt,
+<<<<<<< HEAD
+              :password)
+=======
               :password,
               :password_confirmation,
               org_ids: [])
+>>>>>>> master
 
   end
 

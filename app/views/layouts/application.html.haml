@@ -15,13 +15,14 @@
         = link_to "USPMais", root_path, id: "logo"
         %nav
           %ul.nav.navbar-nav.navbar-right
-
+          
             - if logged_in?
               %li= link_to "Criar evento", new_event_path
             - else
               %li= link_to "Criar usuário", new_user_path
 
-            %li= link_to "Criar organização", new_org_path
+
+
 
             - if logged_in?
               %li= link_to "Users", '#'

@@ -48,6 +48,8 @@ Model: <date> - <who> list_of_changes
         - Ainda no rails c, veja como e facil ver, por exemplo, todos os users relacionados a uma determinada org:
             Follow.where(org:minha_org)
 
+    [FONTE: https://kolosek.com/rails-join-table/]        
+
 ## 15/05 Felipe
 
 - Criei uma header inicial. Para isso, usei a gema `bootstrap_scss`, e segui [este tutorial](https://www.railstutorial.org/book/filling_in_the_layout). Coloquei acesso para criação de usuario e para a pagina inicial. Ademais, mechi no arquivo `app/views/application.html.haml`, que é uma pagina que esta em toda pagina da aplicação, assim, colocando o header apenas nela, terei um header em toda outra pagina do projeto.
@@ -131,8 +133,9 @@ Model: <date> - <who> list_of_changes
         2. Adicionei o action update no user controller;
         3. View user/[:id]/edit criada;
         4. View user/index modificada -> adição do link edit
-        
+   
     - Feature delete adicionada em /org, /event e /user;
+
 
     - [Fonte](https://www.railstutorial.org/book/updating_and_deleting_users)
 
@@ -143,6 +146,45 @@ Model: <date> - <who> list_of_changes
     1. Ao criar um novo login, o usuario é logado no sistema automaticamente.
     2. É possivel realizar o login com o email e senha cadastrados.
     3. Ao realizar o login, as informações no header são alteradas.
+
+
+## 17/05 Dani
+
+- Tomamos a decisao de excluir as orgs, transformando os users em organizaçoes.
+De agora em diante, quem tera login serao apenas os admins das organizaçoes.
+Quem quiser interagir com os eventos nao precisara fazer login, de modo que a plataforma
+passa a ser um mural para o uspiano (ou nao) comum.
+
+- Tive que reorganizar as tabelas de ligaçao (de references). Preferi excluir todas e
+criar uma nova, hosts, que ligasse user a events.
+
+- DELETANDO AS ANTIGAS:
+
+  - Executei:
+    rails g migration drop_follows
+    rails g migration drop_orgs_and_hosts
+  - Dentro do arquivo de migraçao do drop_follows:
+      drop_table :follows
+      drop_table :subscribeds
+  - Dentro do arquivo de migraçao do drop_orgs_and_hosts:
+      drop_table :hosts
+      drop_table :orgs
+  - Executei:
+      rails db:migrate
+      rails destroy model follows
+      rails destroy model subscribeds
+      rails destroy model hosts
+      rails destroy model orgs
+      rails destroy controller org
+
+  [Fonte: https://medium.com/@limichelle21/ctrl-z-in-rails-5-undo-tables-models-and-controllers-bc012ca49d68]
+
+- CRIANDO A NOVA HOST:
+
+    - Executei:
+        rails g model Host event:references user:references
+    - Modifiquei os models do user e event
+    - Modifiquei o controller do event
 
 - Organizei a pagina como um todo, mais especificamente:
 

@@ -27,10 +27,10 @@ class EventController < ApplicationController
 
     @event = Event.find(params[:id])
 
-    if @event.update_attributes(event_params)  
+    if @event.update_attributes(event_params)
       # Handle a successful update.
       redirect_to @event
-        
+
     else
       render 'edit'
     end
@@ -59,7 +59,6 @@ class EventController < ApplicationController
                 :local,
                 :date,
                 :time,
-                org_ids: [],
                 user_ids: [])
     end
 

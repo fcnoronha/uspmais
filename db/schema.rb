@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_05_16_205034) do
+ActiveRecord::Schema.define(version: 2019_05_18_024520) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -27,46 +27,13 @@ ActiveRecord::Schema.define(version: 2019_05_16_205034) do
     t.integer "time"
   end
 
-  create_table "follows", force: :cascade do |t|
-    t.bigint "user_id"
-    t.bigint "org_id"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.index ["org_id"], name: "index_follows_on_org_id"
-    t.index ["user_id"], name: "index_follows_on_user_id"
-  end
-
   create_table "hosts", force: :cascade do |t|
-    t.bigint "org_id"
     t.bigint "event_id"
+    t.bigint "user_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["event_id"], name: "index_hosts_on_event_id"
-    t.index ["org_id"], name: "index_hosts_on_org_id"
-  end
-
-  create_table "orgs", force: :cascade do |t|
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.integer "id_org"
-    t.string "nome"
-    t.string "email"
-    t.binary "foto"
-    t.string "instituto"
-    t.string "curso"
-    t.string "info"
-    t.string "link_site"
-    t.string "link_fb"
-    t.string "link_tt"
-  end
-
-  create_table "subscribeds", force: :cascade do |t|
-    t.bigint "user_id"
-    t.bigint "event_id"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.index ["event_id"], name: "index_subscribeds_on_event_id"
-    t.index ["user_id"], name: "index_subscribeds_on_user_id"
+    t.index ["user_id"], name: "index_hosts_on_user_id"
   end
 
   create_table "users", force: :cascade do |t|
@@ -84,7 +51,5 @@ ActiveRecord::Schema.define(version: 2019_05_16_205034) do
   end
 
   add_foreign_key "hosts", "events"
-  add_foreign_key "hosts", "orgs"
-  add_foreign_key "subscribeds", "events"
-  add_foreign_key "subscribeds", "users"
+  add_foreign_key "hosts", "users"
 end
