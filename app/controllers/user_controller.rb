@@ -6,6 +6,10 @@ class UserController < ApplicationController
     @user = User.new
   end
 
+  def index
+    @users = User.all
+  end
+
   # Defining function of the controller
   def create
 
@@ -33,10 +37,10 @@ class UserController < ApplicationController
 
     @user = User.find(params[:id])
 
-    if @user.update_attributes(user_params)  
+    if @user.update_attributes(user_params)
       # Handle a successful update.
       redirect_to @user
-        
+
     else
       render 'edit'
     end
@@ -60,8 +64,7 @@ class UserController < ApplicationController
               :link_site,
               :link_fb,
               :link_tt,
-              :password,
-              org_ids: [])
+              :password)
 
   end
 

@@ -1,7 +1,15 @@
-%html
-  %head
-    %title USPMais - Inicio
-
-%h1 Pagina inicial - USPMais
-
+%h1 Organizaçoes cadastradas
+%table
+  %tr
+    %th Organizaçao
+    %th Info
+    %th
+  - @users.each do |us|
+    %tr
+      %td= us.nome
+      %td= us.info
+      %td
+        = link_to t(:show), user_path(us)
+        = link_to t(:edit), edit_user_path(us)
+= link_to t(:back), new_user_path
 %p Find me in app/views/user/index.html.haml

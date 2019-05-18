@@ -1,17 +1,4 @@
-ORG
-	id_org (PK)
-	nome
-	email
-	foto
-	instituto
-	curso
-	info
-	link_site
-	link_fb
-	link_tt
-	TEM -> tags
-
-ORG_EVENTO (Uma org cede muitos eventos)
+USUARIO_EVENTO (Uma org cede muitos eventos)
 	id_org (Foreign Key)
 	id_evento (FK)
 
@@ -24,16 +11,9 @@ USUARIO
 	info
 	link_site
 	link_fb
-	link_tt
+	link_ttorgs
 	TEM -> tags
 
-USER_ASSINA_EVENTO (Um usuario pode assinar/followar varios eventos)
-	id_user
-	id_evento
-
-USER_ASSINA_ORG
-	id_user
-	id_org
 
 EVENTOS
 	id_evento (PK)
@@ -48,5 +28,4 @@ EVENTOS
 	cnt_eu_quero
 	lista_emails (Lista de emails que iam receber notificações)
 	TEM -> tags
-	TEM ASSINANTES -> users
-	SAO CEDIDOS POR -> orgs
+	SAO CEDIDOS POR -> users
