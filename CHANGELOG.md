@@ -132,3 +132,11 @@ Model: <date> - <who> list_of_changes
         4. View user/index modificada -> adição do link edit
 
     - [Fonte](https://www.railstutorial.org/book/updating_and_deleting_users)
+
+## 17/05 Felipe
+
+- Arrumei o login, agora temos uma sessão funcional. QUe funciona da seguinte maneira:
+
+    1. Ao criar um novo login, o usuario é logado no sistema automaticamente.
+    2. É possivel realizar o login com o email e senha cadastrados.
+    3. Ao realizar o login, as informações no header são alteradas.

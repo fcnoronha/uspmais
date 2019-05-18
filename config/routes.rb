@@ -18,8 +18,8 @@ Rails.application.routes.draw do
   root 'user#index'
 
   # Login routes
-  get    '/login',   to: 'sessions#new'
-  post   '/login',   to: 'sessions#create'
-  delete '/logout',  to: 'sessions#destroy'
+  get    '/login',   to: 'session#new'
+  post   '/login',   to: 'session#create'
+  delete '/logout',  to: 'session#destroy'
 
 end
