@@ -9,7 +9,7 @@
       %td= ev.nome
       %td= ev.info
       %td
-        = link_to t(:delete), event_path(o), method: :delete,
+        = link_to t(:delete), event_path(ev), method: :delete,
       data: {confirm: "Você tem certeza?"}
       %td
         = link_to t(:show), event_path(ev)
