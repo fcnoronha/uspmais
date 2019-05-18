@@ -193,3 +193,5 @@ criar uma nova, hosts, que ligasse user a events.
         rails g model Host event:references user:references
     - Modifiquei os models do user e event
     - Modifiquei o controller do event
+
+- Criei um arquivo provisorio "user/profile.html.haml". A ideia e que o codigo dele deve ir para o user/show.html.haml eventualmente. E o codigo que esta em user/show.html.haml deveria estar em um /index do proprio site, como uma pagina inicial (tambem provisoria, enquanto nao implementamos a pesquisa)
