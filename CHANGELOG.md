@@ -69,3 +69,6 @@ Model: <date> - <who> list_of_changes
 
     rake db:migrate
 
+## 17/05 Rodrigo
+
+    - Feature delete adicionada em /org, /event

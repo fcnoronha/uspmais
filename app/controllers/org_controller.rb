@@ -26,8 +26,7 @@ class OrgController < ApplicationController
   def destroy
     @org = Org.find(params[:id])
     @org.destroy
-
-    #redirect_to WHERE??? FIXME
+    redirect_to org_index_path
   end
 
   private
