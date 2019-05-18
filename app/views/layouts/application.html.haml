@@ -36,7 +36,17 @@
 
     </br>
   %body
+    = yield
+
     .container
       - flash.each do |message_type, message|
         %div{:class => "alert alert-#{message_type}"}= message
-    = yield
+
+    .container
+      %footer.footer
+        %small
+          USPMais - Eventos e universidade
+        %nav
+          %ul
+            %li= link_to "Sobre nós",   '#'
+            %li= link_to "Github", 'http://github.com/mrfelipenoronha/uspmais'

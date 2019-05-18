@@ -140,3 +140,8 @@ Model: <date> - <who> list_of_changes
     1. Ao criar um novo login, o usuario é logado no sistema automaticamente.
     2. É possivel realizar o login com o email e senha cadastrados.
     3. Ao realizar o login, as informações no header são alteradas.
+
+- Organizei a pagina como um todo, mais especificamente:
+
+    1. Adicionei um breve texto á pagina inicial.
+    2. Adicionei um footer nas paginas.
