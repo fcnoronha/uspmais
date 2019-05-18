@@ -24,6 +24,24 @@ class UserController < ApplicationController
       #render :new # views/new.html.haml
   end
 
+  def edit
+    @user = User.find(params[:id])
+  end
+
+  # Update the database
+  def update
+
+    @user = User.find(params[:id])
+
+    if @user.update_attributes(user_params)  
+      # Handle a successful update.
+      redirect_to @user
+        
+    else
+      render 'edit'
+    end
+  end
+
   # Showed when user is created
   def show
     @user = User.find(params[:id])

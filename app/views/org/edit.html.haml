@@ -1,0 +1,42 @@
+- if @errors
+  = @errors
+
+%html
+  %head
+    %title Editar Org
+
+%h1 Edição de Org
+.row
+  .col-md-6.col-md-offset-3
+    = form_with model: @org, local: true  do |f|
+      = f.label :nome
+      = f.text_field :nome, class: 'form-control'
+      %br
+      = f.label :email
+      = f.email_field :email, class: 'form-control'
+      %br
+      = f.label :instituto
+      = f.text_field :instituto, class: 'form-control'
+      /%br
+      /= f.label :foto
+      /= f.url_field :foto, class: 'form-control'
+      /= f.submit 'Submit', :foto => "form_submit"
+      %br
+      = f.label :curso
+      = f.text_field :curso, class: 'form-control'
+      %br
+      = f.label :info
+      = f.text_field :info, class: 'form-control'
+      %br
+      = f.label :link_site
+      = f.url_field :link_site, class: 'form-control'
+      %br
+      = f.label :link_fb
+      = f.url_field :link_fb, class: 'form-control'
+      %br
+      = f.label :link_tt
+      = f.url_field :link_tt, class: 'form-control'
+      %br
+      = f.submit "Salvar mudanças", class: "btn btn-primary"
+
+%p Find me in app/views/org/[:id]/edit.html.haml

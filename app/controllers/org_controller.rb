@@ -1,8 +1,8 @@
 class OrgController < ApplicationController
 
-    def index
-         @orgs = Org.all
-    end
+  def index
+    @orgs = Org.all
+  end
 
   def create
 
@@ -16,6 +16,24 @@ class OrgController < ApplicationController
 
       @errors = @org.errors.full_messages
       render :new # views/new.html.haml
+  end
+
+  def edit
+    @org = Org.find(params[:id])
+  end
+
+  # Update the database
+  def update
+
+    @org = Org.find(params[:id])
+
+    if @org.update_attributes(org_params)  
+      # Handle a successful update.
+      redirect_to @org
+        
+    else
+      render 'edit'
+    end
   end
 
   # Showed when user is created
