@@ -132,7 +132,7 @@ Model: <date> - <who> list_of_changes
         3. View user/[:id]/edit criada;
         4. View user/index modificada -> adição do link edit
         
-    - Feature delete adicionada em /org, /event
+    - Feature delete adicionada em /org, /event e /user;
 
     - [Fonte](https://www.railstutorial.org/book/updating_and_deleting_users)
 
