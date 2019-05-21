@@ -40,3 +40,8 @@
       = f.password_field :password, class: 'form-control'
       %br
       = f.submit "Salvar Mudanças", class: "btn btn-primary"
+      %br
+      %br
+      %br
+      %br
+      = link_to "Deletar Usuário", user_path(current_user), method: :delete, class: "btn btn-primary", data: {confirm: "Você tem certeza?"}
