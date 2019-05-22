@@ -18,3 +18,8 @@
   TIME:
   %i= @event.time
   %br
+  %br
+  = link_to "Editar Evento", edit_event_path(@event.id)
+  %br
+  = link_to "Deletar Evento", event_path(@event.id), method: :delete,
+  data: {confirm: "Você tem certeza?"}

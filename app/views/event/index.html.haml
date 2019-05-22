@@ -1,17 +1,7 @@
 %h1 Eventos cadastrados
-%table
-  %tr
-    %th Evento
-    %th Info
-    %th
+Lista de Eventos:
+%ul.events
   - @events.each do |ev|
-    %tr
-      %td= ev.nome
-      %td= ev.info
-      %td
-        = link_to t(:delete), event_path(ev), method: :delete,
-      data: {confirm: "Você tem certeza?"}
-      %td
-        = link_to t(:show), event_path(ev)
-        = link_to t(:edit), edit_org_path(ev)
-= link_to t(:back), new_event_path
+    %li
+      =link_to ev.nome, event_path(ev)
+= link_to "Criar novo evento", new_event_path

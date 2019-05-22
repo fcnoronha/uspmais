@@ -216,3 +216,5 @@ criar uma nova, hosts, que ligasse user a events.
 ## 22/05 Rodrigo
 
 - Fiz um botão no header que redireciona para a lista de eventos criados.
+- O /event/index lista os eventos e se clicar em algum evento, você é redirecionado para ele.
+- Estando no /event/:id, agora tem um botão que redireciona para edição e outra pra deleção desse mesmo evento.
