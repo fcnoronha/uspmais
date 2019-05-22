@@ -208,3 +208,11 @@ criar uma nova, hosts, que ligasse user a events.
 - Arrumei o header, para que, quando o usuario esteja logado, o botao de editar da dropdown list redirecione para a edição dele.
 - Arrumei as rotas para as novas paginas.
 - Escrevi coisas na pagina sobre nos.
+
+## 21/05 Rodrigo
+
+- Deleção de usuário adicionado na página de config do usuário (/edit)
+
+## 22/05 Rodrigo
+
+- Fiz um botão no header que redireciona para a lista de eventos criados.
