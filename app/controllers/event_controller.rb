@@ -4,18 +4,44 @@ class EventController < ApplicationController
     @events = Event.all
   end
 
+  def my
+    unless logged_in?
+      flash[:danger] = 'Você precisa estar logado para consultar seus eventos!'
+      redirect_to "/session/new"
+      return
+    end
+    @my_events = Event.joins(:users).where(users: {id: current_user.id})
+  end
+
+  def new
+    unless logged_in?
+      flash[:danger] = 'Você precisa estar logado para criar um evento!'
+      redirect_to "/session/new"
+      return
+    end
+  end
+
   def create
 
-      # Parameter that are obligatory to be passed and the ones that are optional
-      @event = Event.new(event_params)
+    unless logged_in?
+      flash[:danger] = 'Você precisa estar logado para criar um evento!'
+      redirect_to "/session/new"
+      return
+    end
 
-      if @event.save
-        redirect_to @event
-        return
-      end
+    # Parameter that are obligatory to be passed and the ones that are optional
+    @event = Event.new(event_params)
 
+    unless @event.save
       @errors = @event.errors.full_messages
       render :new # views/new.html.haml
+      return
+    end
+
+    host = Host.new(event: @event, user: current_user)
+    host.save!
+
+    redirect_to @event
   end
 
   def edit

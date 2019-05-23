@@ -231,3 +231,8 @@ criar uma nova, hosts, que ligasse user a events.
     1. Executei rails g migration change_date_type_at_events_to_date
     2. Criei o método `change` no /db/migrate/change_date_type_at_events_to_date
     3. Executei rake db:migrate
+
+## 23/05 Daniela
+- Agora, quando um evento e criado, ele verifica se voce esta logado antes. Quando logado, o evento que voce cria e automaticamente linkado ao usuario logado por meio do model Host. Fiz isso alterando o "event_controller". Se voce tenta criar um evento nao estando logado, voce e redirecionado para a pagina de login, com um flash.
+- O usuario pode listar os eventos que esta cedendo pelo botao com dropdown. Fiz isso criando a view "my.html.haml", alterando "event_controller.rb", o "routes.rb" e o "application.html.haml". Novamenta ha toda a verificaçao se o usuario esta logado, e se nao esta, e redirecionado para a pagina de login.
+- O header estava com um bug: quando eu ia de uma pagina a outra e tentava visualizar o dropdown, nao era possivel clicar. Precisava dar refresh na pagina. O erro que aparecia no console do navegador era do "turbolinks" e advertia que o header deveria estar no body, nao no head do html da application. O problema: o body da pagina agora divide espaço com o header, mas ainda nao temos css para sentir onde começar o titulo das paginas por exemplo. Por isso as vezes os titulos podem ficar ligeiramente cobertos pelo header. Fiz uma gambiarra para tentar conserta-lo (com %br%br heheh), mas isso precisa ser arrumado.
