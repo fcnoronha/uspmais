@@ -216,5 +216,18 @@ criar uma nova, hosts, que ligasse user a events.
 ## 22/05 Rodrigo
 
 - Fiz um botão no header que redireciona para a lista de eventos criados.
+
 - O /event/index lista os eventos e se clicar em algum evento, você é redirecionado para ele.
+
 - Estando no /event/:id, agora tem um botão que redireciona para edição e outra pra deleção desse mesmo evento.
+
+- Mudando data type de "time"(integer -> time):
+    1. Executei rails g migration change_time_type_at_events_to_time
+    2. Criei o método `change` no /db/migrate/change_time_type_at_events_to_time
+    3. Executei rake db:migrate:reset
+    4. Executei rake db:migrate
+
+- Mudando data type de "date"(integer -> date):
+    1. Executei rails g migration change_date_type_at_events_to_date
+    2. Criei o método `change` no /db/migrate/change_date_type_at_events_to_date
+    3. Executei rake db:migrate
