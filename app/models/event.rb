@@ -4,7 +4,7 @@ class Event < ApplicationRecord
     validates :date, presence: true
     validates :time, presence: true
 
-    has_many :hosts
+    has_many :hosts, dependent: :destroy
     has_many :users, through: :hosts
 
 end

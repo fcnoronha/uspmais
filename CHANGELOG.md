@@ -253,3 +253,7 @@ criar uma nova, hosts, que ligasse user a events.
 - Agora, só é possivel editar um evento se você for o criador dele.
 
 - Arrumei o posicionamento da mensagem flash.
+
+## 24/03 Rodrigo
+
+- Consertei um pequeno erro: Quando tentava deletar um evento, dava erro porque a tabela hosts que depende de event não sabia o que fazer agora que o evento vinculado não estava mais lá. Apenas adicionei `dependent: :destroy` no /model/event para deletar da tabela host junto.
