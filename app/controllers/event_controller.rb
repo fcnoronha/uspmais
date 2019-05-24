@@ -30,7 +30,7 @@ class EventController < ApplicationController
     end
 
     # Parameter that are obligatory to be passed and the ones that are optional
-    flash[:success] = "Evento realizado com sucesso!"
+    flash[:success] = "Evento criado com sucesso!"
     @event = Event.new(event_params)
 
     unless @event.save
@@ -66,6 +66,10 @@ class EventController < ApplicationController
 
   # Showed when user is created
   def show
+    if logged_in?
+      @my_events = Event.joins(:users).where(users: {id: current_user.id})
+    end
+
     @event = Event.find(params[:id])
   end
 

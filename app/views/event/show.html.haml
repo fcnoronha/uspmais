@@ -24,7 +24,7 @@
     %i= @event.time
     %br
     %br
-    - if logged_in?
+    - if logged_in? and @my_events.include? @event
       = link_to "Editar Evento", edit_event_path(@event.id), class: "btn btn-primary"
       %br
       %br

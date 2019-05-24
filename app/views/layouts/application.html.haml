@@ -6,8 +6,6 @@
     = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload'
     = javascript_include_tag 'application', 'data-turbolinks-track': 'reload'
 
-
-
     %header.navbar.navbar-fixed-top.navbar-inverse
       .container
         = link_to "USPMais", root_path, id: "logo"
@@ -49,11 +47,13 @@
     %body
     %br
     %br
-    = yield
+    %br
 
     .container
       - flash.each do |message_type, message|
         %div{:class => "alert alert-#{message_type}"}= message
+
+    = yield
 
     .container
       %footer.footer

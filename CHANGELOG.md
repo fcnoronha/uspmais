@@ -249,3 +249,7 @@ criar uma nova, hosts, que ligasse user a events.
 - Troquei a condição para que `user/show` escolhesse ou não renderizar algumas coisas.
 
 - Coloquei titulo nas paginas que estavam sem.
+
+- Agora, só é possivel editar um evento se você for o criador dele.
+
+- Arrumei o posicionamento da mensagem flash.
