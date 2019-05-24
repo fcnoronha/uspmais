@@ -1,25 +1,32 @@
-%h1 Pronto!
-%p
-  NOME:
-  %i= @event.nome
-  %br
-  -#FOTO:
-  -#%i= @event.foto
-  -#br
-  INFO:
-  %i= @event.info
-  %br
-  LOCAL:
-  %i= @event.local
-  %br
-  DATE:
-  %i= @event.date
-  %br
-  TIME:
-  %i= @event.time
-  %br
-  %br
-  = link_to "Editar Evento", edit_event_path(@event.id)
-  %br
-  = link_to "Deletar Evento", event_path(@event.id), method: :delete,
-  data: {confirm: "Você tem certeza?"}
+%head
+  %title Página do evento
+
+%h1 Página do evento
+
+.col-md-10.col-md-offset-1
+  %p
+    Nome:
+    %i= @event.nome
+    %br
+    -#FOTO:
+    -#%i= @event.foto
+    -#br
+    Informações:
+    %i= @event.info
+    %br
+    Local:
+    %i= @event.local
+    %br
+    Data:
+    %i= @event.date
+    %br
+    Hora:
+    %i= @event.time
+    %br
+    %br
+    - if logged_in?
+      = link_to "Editar Evento", edit_event_path(@event.id), class: "btn btn-primary"
+      %br
+      %br
+      = link_to "Deletar Evento", event_path(@event.id), method: :delete,
+      data: {confirm: "Você tem certeza?"}, class: "btn btn-primary"

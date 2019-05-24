@@ -30,6 +30,7 @@ class EventController < ApplicationController
     end
 
     # Parameter that are obligatory to be passed and the ones that are optional
+    flash[:success] = "Evento realizado com sucesso!"
     @event = Event.new(event_params)
 
     unless @event.save

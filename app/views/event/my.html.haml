@@ -1,7 +1,13 @@
+%head
+  %title Meus Eventos
+
 %h1 Meus Eventos
-%b Lista dos Eventos Cadastrados por Mim:
-%ul.events
-  - @my_events.each do |mev|
-    %li
-      =link_to mev.nome, event_path(mev)
-= link_to "Criar novo evento", new_event_path
+
+.col-md-10.col-md-offset-1
+
+  %b Lista dos Eventos Cadastrados por mim:
+  %ul.events
+    - @my_events.each do |mev|
+      %li
+        =link_to mev.nome, event_path(mev)
+  = link_to "Criar novo evento", new_event_path, class: "btn btn-primary"

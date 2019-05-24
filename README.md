@@ -35,5 +35,4 @@ O usuário poderia realizar um log in para gerenciar todos seus interesses e se 
 ## Nome dos integrantes
 - Daniela Favero,  10277443
 - Felipe Noronha,  10737032
-- Gustavo Bastos,  10284389  
 - Rodrigo Vidotti, 10687896

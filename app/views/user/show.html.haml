@@ -1,1 +1,37 @@
-%h1 Oi, eu sou a antiga pagina inicial, se voce esta me vendo como pagina inicial e nao como index de usuário, algo esta errrado, bata no Felipe
+%head
+  %title Usuario
+
+%h1 Meu USP+
+
+.col-md-10.col-md-offset-1
+  %p
+    Nome:
+    %i= @user.nome
+    %br
+    -#FOTO:
+    -#%i= @event.foto
+    -#br
+    Email:
+    %i= @user.email
+    %br
+    Instituto:
+    %i= @user.instituto
+    %br
+    Curso:
+    %i= @user.curso
+    %br
+    Informações:
+    %i= @user.info
+    %br
+    - unless @user.link_site.empty?
+      Link site:
+      %i= @user.link_site
+      %br
+    - unless @user.link_fb.empty?
+      Link Facebook:
+      %i= @user.link_fb
+    %br
+    - unless @user.link_tt.empty?
+      Link Twitter:
+      %i= @user.link_tt
+      %br

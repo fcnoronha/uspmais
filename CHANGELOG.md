@@ -1,54 +1,52 @@
 # Changelog
 
-Model: <date> - <who> list_of_changes
-
 ## 05/05 Felipe
 
-    - Criação do CHANGELOG
-    - A partir de agora, os comandos foram realizados no shell do docker
-    - Gerando modelo para usuario com `bin/rails g model User id_user:primary_key nome:string email:string instituto:string curso:string info:string is_user:boolean link_site:string link_fb:string link_tt:string is_org:boolean lista_`emails:string tags:string`
-    - `bin/rails db:migrate` - migrando para o banco
-    - Pagina para criação de usuário
+- Criação do CHANGELOG
+- A partir de agora, os comandos foram realizados no shell do docker
+- Gerando modelo para usuario com `bin/rails g model User id_user:primary_key nome:string email:string instituto:string curso:string info:string is_user:boolean link_site:string link_fb:string link_tt:string is_org:boolean lista_`emails:string tags:string`
+- `bin/rails db:migrate` - migrando para o banco
+- Pagina para criação de usuário
 
 ## 09/05 Grupo
 
-    - Criamos tabela de organinação e definimos tabelas 1:n
-    - Executamos:
+- Criamos tabela de organinação e definimos tabelas 1:n
+- Executamos:
 
-        bin/rails g controller Org index
+    bin/rails g controller Org index
 
-        bin/rails g model Org
+    bin/rails g model Org
 
-        rake db:migrate
+    rake db:migrate
 
-        rails generate migration add_column_to_org id_org:integer nome:string email:string foto:blob instituto:string curso:string info:string link_site:string link_fb:string link_tt:string
+    rails generate migration add_column_to_org id_org:integer nome:string email:string foto:blob instituto:string curso:string info:string link_site:string link_fb:string link_tt:string
 
 ## 15/05 Dani
 
-    - Criaçao da relaçao entre as tabelas "user" e "org", chamada de "follows"
+- Criaçao da relaçao entre as tabelas "user" e "org", chamada de "follows"
 
-    - Executei:
-        rails g model Follow user:references org:references
-    - Modifiquei os models do user, org e follow
-    - Modifiquei o controller do user
+- Executei:
+    rails g model Follow user:references org:references
+- Modifiquei os models do user, org e follow
+- Modifiquei o controller do user
 
-    - Divirta-se criando uma relaçao:
-        - Abra o localhost:3000 e crie um user e uma org
-        - Dentro do terminalzinho do docker, faça o seguinte:
-            rails c
-            User.all
-            Org.all
-            meu_user = User.find(1)
-            minha_org = Org.find(1)
-            meu_follow = Follow.new
-            meu_follow.user = meu_user
-            meu_follow.org = minha_org
-            meu_follow.save
-            meu_follow
-        - Ainda no rails c, veja como e facil ver, por exemplo, todos os users relacionados a uma determinada org:
-            Follow.where(org:minha_org)
+- Divirta-se criando uma relaçao:
+    - Abra o localhost:3000 e crie um user e uma org
+    - Dentro do terminalzinho do docker, faça o seguinte:
+        rails c
+        User.all
+        Org.all
+        meu_user = User.find(1)
+        minha_org = Org.find(1)
+        meu_follow = Follow.new
+        meu_follow.user = meu_user
+        meu_follow.org = minha_org
+        meu_follow.save
+        meu_follow
+    - Ainda no rails c, veja como e facil ver, por exemplo, todos os users relacionados a uma determinada org:
+        Follow.where(org:minha_org)
 
-    [FONTE: https://kolosek.com/rails-join-table/]        
+[FONTE:](https://kolosek.com/rails-join-table/)        
 
 ## 15/05 Felipe
 
@@ -89,7 +87,7 @@ Model: <date> - <who> list_of_changes
 
 - Tabela Event criada
 
--Executei:
+- Executei:
     bin/rails g controller Event index
 
     bin/rails g model Event
@@ -149,12 +147,7 @@ Model: <date> - <who> list_of_changes
 
 - Organizei a pagina como um todo, mais especificamente:
 
-    1. Adicionei um breve texto á pagina inicial.  {
-    title: "Uspmais"
-    paths: [
-      "/media/felipe/extd/Faculdade/3 semestre/MAC0218/uspmais"
-    ]
-  }
+    1. Adicionei um breve texto á pagina inicial.  
     2. Adicionei um footer nas paginas.
     3. Organizei a visualização do usuário (link para perfil), para deixar mais agradavel.
     4. Fiz com que o header tivesse um comportamento diferente quando um usuario é logado, assim, o botão 'criar usuario' da espaço ao botão 'criar evento'.
@@ -234,5 +227,25 @@ criar uma nova, hosts, que ligasse user a events.
 
 ## 23/05 Daniela
 - Agora, quando um evento e criado, ele verifica se voce esta logado antes. Quando logado, o evento que voce cria e automaticamente linkado ao usuario logado por meio do model Host. Fiz isso alterando o "event_controller". Se voce tenta criar um evento nao estando logado, voce e redirecionado para a pagina de login, com um flash.
+
 - O usuario pode listar os eventos que esta cedendo pelo botao com dropdown. Fiz isso criando a view "my.html.haml", alterando "event_controller.rb", o "routes.rb" e o "application.html.haml". Novamenta ha toda a verificaçao se o usuario esta logado, e se nao esta, e redirecionado para a pagina de login.
+
 - O header estava com um bug: quando eu ia de uma pagina a outra e tentava visualizar o dropdown, nao era possivel clicar. Precisava dar refresh na pagina. O erro que aparecia no console do navegador era do "turbolinks" e advertia que o header deveria estar no body, nao no head do html da application. O problema: o body da pagina agora divide espaço com o header, mas ainda nao temos css para sentir onde começar o titulo das paginas por exemplo. Por isso as vezes os titulos podem ficar ligeiramente cobertos pelo header. Fiz uma gambiarra para tentar conserta-lo (com %br%br heheh), mas isso precisa ser arrumado.
+
+## 24/05 Felipe
+
+- Arrumei umas formatações aqui no CHANGELOG que estavam ativando muito o meu TOC.
+
+- Arrumei a descrição das labels de alguns formularios.
+
+- Coloquei uma flash para quando um evento é criado.
+
+- Arrumei a formatação de `event/show/html/haml`, `index/show/html/haml`, `my/show/html/haml`, colocando as coisas dentro de uma margem.
+
+- Troquei alguns `link_to` simples por botões.
+
+- Aparentemente arrumei o header, voltei ele para a sessão de *header* do application, fiz algumas alterações e não consegui reproduzir o erro que acontecia com a Daniela. Por hora, considero este erro arrumado.
+
+- Troquei a condição para que `user/show` escolhesse ou não renderizar algumas coisas.
+
+- Coloquei titulo nas paginas que estavam sem.
