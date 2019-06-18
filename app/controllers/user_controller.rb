@@ -7,7 +7,7 @@ class UserController < ApplicationController
   end
 
   def index
-    @users = User.all
+    @users = User.all 
   end
 
   # Defining function of the controller

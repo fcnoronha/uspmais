@@ -265,3 +265,4 @@ criar uma nova, hosts, que ligasse user a events.
 - Instalei a gema `factory_bot_rails`, essa gema sera a factory para os nossos tests. EM seguida criei pastas e arquivos necessarios para o seu devido funcionamento.
 - Executei `rails g rspec:model user` para gerar os testes necessarios para o model do usuario.
 - Configurei um factory para usuario, apenas criando o arquivo `user.rb` na pasta `spec/factories`.
+- Executei `rails g rspec:controller user` para gerar os testes necessarios para o controller do usuario, mas nao comecei a fazer nenhum.
