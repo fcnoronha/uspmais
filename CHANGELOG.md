@@ -254,6 +254,12 @@ criar uma nova, hosts, que ligasse user a events.
 
 - Arrumei o posicionamento da mensagem flash.
 
-## 24/03 Rodrigo
+## 24/05 Rodrigo
 
 - Consertei um pequeno erro: Quando tentava deletar um evento, dava erro porque a tabela hosts que depende de event não sabia o que fazer agora que o evento vinculado não estava mais lá. Apenas adicionei `dependent: :destroy` no /model/event para deletar da tabela host junto.
+
+# 18/06 Felipe
+
+- Instalei o RSpec no projeto, adicionando a gema e executando `rails generate rspec:install`.
+- Instalei a gema `factory_bot_rails`, essa gema sera a factory para os nossos tests.
+- Executei `rails g rspec:model user` para gerar os testes necessarios para o model do usuario.
