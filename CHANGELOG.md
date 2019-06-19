@@ -258,11 +258,16 @@ criar uma nova, hosts, que ligasse user a events.
 
 - Consertei um pequeno erro: Quando tentava deletar um evento, dava erro porque a tabela hosts que depende de event não sabia o que fazer agora que o evento vinculado não estava mais lá. Apenas adicionei `dependent: :destroy` no /model/event para deletar da tabela host junto.
 
-# 18/06 Felipe
+## 18/06 Felipe
 
 - Instalei o RSpec no projeto, adicionando a gema e executando `rails generate rspec:install`.
 - Basta executar `rspec` no terminal para executar os testes.
 - Instalei a gema `factory_bot_rails`, essa gema sera a factory para os nossos tests. EM seguida criei pastas e arquivos necessarios para o seu devido funcionamento.
 - Executei `rails g rspec:model user` para gerar os testes necessarios para o model do usuario.
 - Configurei um factory para usuario, apenas criando o arquivo `user.rb` na pasta `spec/factories`.
-- Executei `rails g rspec:controller user` para gerar os testes necessarios para o controller do usuario, mas nao comecei a fazer nenhum.
+- Executei `rails g rspec:controller user` para gerar os testes necessarios para o controller do usuario, mas nao comecei a fazer nenhum.os
+
+## 19/06 Felipe
+
+- Gerel os testes para o model de eventos.
+- Mudei `text_field` para `text_area` algumas partes dos forms.
