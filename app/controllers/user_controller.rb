@@ -18,14 +18,28 @@ class UserController < ApplicationController
 
       if @user.save
         log_in @user
-        flash[:success] = "Cadastro realizado com sucesso!"
-        redirect_to @user
+        UserMailer.registration_confirmation(@user).deliver
+        flash[:success] = "Por favor, confirme o seu endereço de e-mail para continuar"
+        redirect_to root_url
       else
+        flash[:error] = "Não foi possível criar a conta"
         render :new
       end
 
       #@errors = @user.errors.full_messages
       #render :new # views/new.html.haml
+  end
+
+  def confirm_email
+    user = User.find_by_confirm_token(params[:id])
+    if user
+      user.email_activate
+      flash[:success] = "Bem vindx ao USP+! Seu e-mail foi confirmado!"
+      redirect_to root_url
+    else
+      flash[:error] = "Erro: Usuário não existe."
+      redirect_to root_url
+    end
   end
 
   def edit

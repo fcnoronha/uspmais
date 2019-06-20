@@ -271,3 +271,30 @@ criar uma nova, hosts, que ligasse user a events.
 
 - Gerel os testes para o model de eventos.
 - Mudei `text_field` para `text_area` algumas partes dos forms.
+
+## 19/06 Rodrigo
+
+- Adicionei uma coluna emailconfirmed na tabela users através do comando `rails generate migration add_email_confirm_column_to_users email_confirmed:boolean confirm_token:string` e adicionei manualmente o `:default => false`.
+
+- Executei `rake db:migrate` para atualizar a tabela users.
+
+- Atualizei a rota de users, tornando `email_confirmed` um membro do user.
+Obs.: Como optei por não criar um controller apenas para a confirmação de e-mail, nesse caso, o próprio users controller vai fazer o trabalho.
+
+- Criei um arquivo `/controllers/mailers/user.mailer.rb` que enviará o email de confirmação.
+
+- Criei um arquivo e pasta `views/user_mailer/registration_confirmation.text.haml` que será o corpo do e-mail.
+
+- No `/models/user.rb`, criei um método `confirmation_token` e também adicionei `before_create :confirmation_token` no topo para gerar uma string aleatória.
+
+- Modifiquei o método create no `controllers/user_controller.rb` para responder de acordo com uma validação de e-mail padrão.
+
+- Modifiquei o método create no `controllers/session_controller.rb` para logar apenas se a conta foi verificada.
+
+- Criei um novo método em `controllers/user_controllers.rb`, é essa ação que o link do e-mail procura quando alguém clica.
+
+- No `/models/user.rb`, criei um método `email_activate` que atualiza o banco de dados.
+
+[Fonte1](https://coderwall.com/p/u56rra/ruby-on-rails-user-signup-email-confirmation-tutorial)
+[Fonte2](https://www.railstutorial.org/book/account_activation)
+[Fonte3](https://www.youtube.com/watch?v=EycP9L_x5rE)

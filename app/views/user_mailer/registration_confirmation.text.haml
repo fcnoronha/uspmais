@@ -1,0 +1,5 @@
+Olá #{@user.nome},
+
+Obrigado por se cadastrar! Para confirmar o seu cadastro, clique no link abaixo:
+
+\#{confirm_email_user_url(@user.confirm_token)}

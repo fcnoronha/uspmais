@@ -12,7 +12,12 @@ Rails.application.routes.draw do
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 
   # Automatically defining basic routes for user
-  resources :user
+  resources :user do
+    member do
+      get :confirm_email
+    end
+  end
+  
   resources :org
   resources :event
 
