@@ -295,6 +295,8 @@ Obs.: Como optei por não criar um controller apenas para a confirmação de e-m
 
 - No `/models/user.rb`, criei um método `email_activate` que atualiza o banco de dados.
 
+- Modifiquei o `/environment/development.rb/`.
+
 [Fonte1](https://coderwall.com/p/u56rra/ruby-on-rails-user-signup-email-confirmation-tutorial)
 [Fonte2](https://www.railstutorial.org/book/account_activation)
 [Fonte3](https://www.youtube.com/watch?v=EycP9L_x5rE)
