@@ -271,3 +271,17 @@ criar uma nova, hosts, que ligasse user a events.
 
 - Gerel os testes para o model de eventos.
 - Mudei `text_field` para `text_area` algumas partes dos forms.
+
+## 21/06 Rodrigo
+
+- Instalei a gem `devise` que cuidará da validação de email, adicionando-a e execuctando `rails g devise:install`.
+
+- Modifiquei o `/development.rb` para que a validação possa ocorrer dentro do ambiente de desenvolvimento.
+
+- Adicionei flash messages de notice e alert no `/application.html.haml`.
+
+- Executei `rails g devise User` que criar o devise user model.
+
+- Descomentei a parte que usa para a confirmação de e-mail no migrate do `/._add_devise_to_user.rb` e executei o `rails db:migrate`.
+
+- 
