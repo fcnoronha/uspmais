@@ -284,4 +284,9 @@ criar uma nova, hosts, que ligasse user a events.
 
 - Descomentei a parte que usa para a confirmação de e-mail no migrate do `/._add_devise_to_user.rb` e executei o `rails db:migrate`.
 
-- 
+- Adicionei o módulo confirmable no model `/user.rb`.
+
+- Crieri uma conta no site SendGrider para enviar os e-mails. Também configurei o `/config/environment` para que o ActionMailer aponte para o server do SendGrid.
+
+[Fonte1](https://www.youtube.com/watch?v=sVJRkTxqlSQ&t=172s)
+[Fonte2](https://sendgrid.com/docs/for-developers/sending-email/rubyonrails/)

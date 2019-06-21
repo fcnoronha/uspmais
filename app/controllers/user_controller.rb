@@ -16,13 +16,12 @@ class UserController < ApplicationController
       # Parameter that are obligatory to be passed and the ones that are optional
       @user = User.new(user_params)
 
-      if @user.save
-        log_in @user
-        flash[:success] = "Cadastro realizado com sucesso!"
-        redirect_to @user
-      else
-        render :new
-      end
+      # if @user.save(true)
+        flash[:success] = "Por favor, confirme o seu endereço de e-mail para continuar"
+        redirect_to root_url
+      # else
+        # render :new
+      # end
 
       #@errors = @user.errors.full_messages
       #render :new # views/new.html.haml
