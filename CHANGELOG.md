@@ -272,7 +272,7 @@ criar uma nova, hosts, que ligasse user a events.
 - Gerel os testes para o model de eventos.
 - Mudei `text_field` para `text_area` algumas partes dos forms.
 
-## 19/06 Rodrigo
+## 19-21/06 Rodrigo
 
 - Adicionei uma coluna emailconfirmed na tabela users através do comando `rails generate migration add_email_confirm_column_to_users email_confirmed:boolean confirm_token:string` e adicionei manualmente o `:default => false`.
 
@@ -295,8 +295,17 @@ Obs.: Como optei por não criar um controller apenas para a confirmação de e-m
 
 - No `/models/user.rb`, criei um método `email_activate` que atualiza o banco de dados.
 
+- Adicionei a gem `devise`, executei `bundle install` e `rails g devise:install`.
+
 - Modifiquei o `/environment/development.rb/`.
+
+- Modifiquei o `/views/layout/application.html.haml`.
+
+- Executei `rails g devise User`.
+
+- Modifiquei `/db/migrate/..._add_devise_to_user.rb`
 
 [Fonte1](https://coderwall.com/p/u56rra/ruby-on-rails-user-signup-email-confirmation-tutorial)
 [Fonte2](https://www.railstutorial.org/book/account_activation)
 [Fonte3](https://www.youtube.com/watch?v=EycP9L_x5rE)
+[Fonte4](https://www.youtube.com/watch?v=sVJRkTxqlSQ&t=172s)
