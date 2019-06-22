@@ -271,3 +271,12 @@ criar uma nova, hosts, que ligasse user a events.
 
 - Gerel os testes para o model de eventos.
 - Mudei `text_field` para `text_area` algumas partes dos forms.
+
+## 20/06 Daniela
+
+- Instalei o Cucumber adicionando `cucumber-rails` e `database_cleaner` no Gemfile. Depois executei `rails generate cucumber:install`.
+- Instalei o report_builder que faz um merge nos reports do JSON e contri um unico Test Report em HTML. `'report_builder', '~> 0.1.1'` no Gemfile e `gem install report_builder -v 0.1.1` no terminal.
+- Para criar a estrutura de testes do cucumber executei `cucumber --init`. Foi gerada o diretorio "features"!
+- Criei o arquivo cucumber.yaml pra exportar o report do teste em HTML
+- Criei o new_user.feature para gerar um cartao que verifica se foi possivel acessar a pagina de criar novo usuario. Rodei `cucumber` no terminal. Usei as dicas que o terminal me gerou pra criar o arquivo new_user_steps.rb
+- Depois de criar o new_user_steps.rb eu executei `cucumber` novamente
