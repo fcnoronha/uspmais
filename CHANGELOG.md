@@ -280,3 +280,8 @@ criar uma nova, hosts, que ligasse user a events.
 - Criei o arquivo cucumber.yaml pra exportar o report do teste em HTML
 - Criei o new_user.feature para gerar um cartao que verifica se foi possivel acessar a pagina de criar novo usuario. Rodei `cucumber` no terminal. Usei as dicas que o terminal me gerou pra criar o arquivo new_user_steps.rb
 - Depois de criar o new_user_steps.rb eu executei `cucumber` novamente
+- Usei esse tutorial https://medium.com/@caiquecoelho/testando-com-bdd-cucumber-capybara-ruby-e-rails-p-8c9018e05463, esse http://www.automationtestinghub.com/cucumber-data-driven-tests/ e o tutorial do Gubi no PACA
+
+## 22/06 Daniela
+
+- Fiz outros testes com o Cucumber, da maneira como descrevi no dia 20/06

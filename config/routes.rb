@@ -4,7 +4,6 @@ Rails.application.routes.draw do
   get 'static_pages/about'
   # get 'user/index', to 'user#index' (Same as bellow)
   get 'user/index'
-  get 'org/index'
   get 'event/index'
   get 'event/my'
   get 'session/new'
