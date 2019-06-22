@@ -274,4 +274,4 @@ criar uma nova, hosts, que ligasse user a events.
 
 ## 21/06 Rodrigo
 
-- Agora o show mostra apenas a hora no formato 24h.
+- Agora o show mostra apenas a hora no formato 24h, e o ano no formato DD/MM/AAAA.
