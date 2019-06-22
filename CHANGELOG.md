@@ -285,3 +285,4 @@ criar uma nova, hosts, que ligasse user a events.
 ## 22/06 Daniela
 
 - Fiz outros testes com o Cucumber, da maneira como descrevi no dia 20/06
+- Esse link e' perfeito https://stackoverflow.com/questions/2024917/how-do-i-click-on-a-specific-button-using-cucumber-webrat-when-the-name-of-the-b
