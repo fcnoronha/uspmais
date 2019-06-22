@@ -271,3 +271,7 @@ criar uma nova, hosts, que ligasse user a events.
 
 - Gerel os testes para o model de eventos.
 - Mudei `text_field` para `text_area` algumas partes dos forms.
+
+## 21/06 Rodrigo
+
+- Agora o show mostra apenas a hora no formato 24h.

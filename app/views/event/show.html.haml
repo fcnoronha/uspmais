@@ -21,7 +21,7 @@
     %i= @event.date
     %br
     Hora:
-    %i= @event.time
+    %i= @event.time.strftime("%R")
     %br
     %br
     - if logged_in? and @my_events.include? @event
