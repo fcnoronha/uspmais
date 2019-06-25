@@ -21,7 +21,7 @@
                   %li= link_to "Todos os Eventos", event_index_path
                   %li= link_to "Meus Eventos", event_my_path
             - else
-              %li= link_to "Lista de Eventos", event_index_path
+              %li= link_to "Lista de Eventos", event_index_path, id: "events_list"
 
             - if logged_in?
               %li= link_to "Criar evento", new_event_path

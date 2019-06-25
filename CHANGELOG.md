@@ -272,6 +272,21 @@ criar uma nova, hosts, que ligasse user a events.
 - Gerel os testes para o model de eventos.
 - Mudei `text_field` para `text_area` algumas partes dos forms.
 
+## 20/06 Daniela
+
+- Instalei o Cucumber adicionando `cucumber-rails` e `database_cleaner` no Gemfile. Depois executei `rails generate cucumber:install`.
+- Instalei o report_builder que faz um merge nos reports do JSON e contri um unico Test Report em HTML. `'report_builder', '~> 0.1.1'` no Gemfile e `gem install report_builder -v 0.1.1` no terminal.
+- Para criar a estrutura de testes do cucumber executei `cucumber --init`. Foi gerada o diretorio "features"!
+- Criei o arquivo cucumber.yaml pra exportar o report do teste em HTML
+- Criei o new_user.feature para gerar um cartao que verifica se foi possivel acessar a pagina de criar novo usuario. Rodei `cucumber` no terminal. Usei as dicas que o terminal me gerou pra criar o arquivo new_user_steps.rb
+- Depois de criar o new_user_steps.rb eu executei `cucumber` novamente
+- Usei esse tutorial https://medium.com/@caiquecoelho/testando-com-bdd-cucumber-capybara-ruby-e-rails-p-8c9018e05463, esse http://www.automationtestinghub.com/cucumber-data-driven-tests/ e o tutorial do Gubi no PACA
+
 ## 21/06 Rodrigo
 
 - Agora o show mostra apenas a hora no formato 24h, e o ano no formato DD/MM/AAAA.
+
+## 22/06 Daniela
+
+- Fiz outros testes com o Cucumber, da maneira como descrevi no dia 20/06
+- Esse link e' perfeito https://stackoverflow.com/questions/2024917/how-do-i-click-on-a-specific-button-using-cucumber-webrat-when-the-name-of-the-b

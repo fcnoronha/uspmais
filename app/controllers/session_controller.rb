@@ -11,7 +11,7 @@ class SessionController < ApplicationController
             redirect_to user
         else
             # Create an error message.
-            flash.now[:danger] = 'Combinação email/senha invalida!'
+            flash.now[:danger] = 'Combinação email/senha inválida!'
             render 'new'
         end
     end

@@ -11,6 +11,9 @@ development:
   database: uspmais_development
 
 
-test:
+test: &test
   <<: *default
   database: uspmais_test
+
+cucumber:
+  <<: *test

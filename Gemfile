@@ -61,6 +61,9 @@ group :test do
   # Easy installation and use of chromedriver to run system tests with Chrome
   # gem 'chromedriver-helper'
   gem 'webdrivers'
+  gem 'cucumber-rails', require: false
+  gem 'database_cleaner' # cucumber
+  gem 'report_builder', '~> 0.1.1'
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
