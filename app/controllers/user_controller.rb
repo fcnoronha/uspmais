@@ -17,11 +17,11 @@ class UserController < ApplicationController
       @user = User.new(user_params)
 
       if @user.save
-        log_in @user
-        flash[:success] = "Cadastro realizado com sucesso!"
-        redirect_to @user
+        UserMailer.account_activation(@user).deliver_now
+        flash[:info] = "Por favor, cheque o seu e-mail para ativar a sua conta."
+        redirect_to root_url
       else
-        render :new
+        render 'new'
       end
 
       #@errors = @user.errors.full_messages

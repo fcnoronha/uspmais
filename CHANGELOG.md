@@ -313,6 +313,8 @@ criar uma nova, hosts, que ligasse user a events.
 
 - Criei o método new_token no `user.rb`.
 
+- Agora podemos ver a como ficam os e-mails acessando `http://localhost:3000/rails/mailers/user_mailer`.
+
 - 
 
 [Fonte](https://www.railstutorial.org/book/account_activation)

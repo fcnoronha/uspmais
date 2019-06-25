@@ -1,0 +1,5 @@
+Olá #{@user.nome},
+
+Bem vindo ao UspMais! Clique no link abaixo para ativar a sua conta:
+
+\#{edit_account_activation_url(@user.activation_token, email: @user.email)}
