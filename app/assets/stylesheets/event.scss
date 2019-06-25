@@ -30,3 +30,37 @@
   flex: 33.33%;
   padding: 5px;
 }
+
+
+.mylist>ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.mylist>ul>li {
+  font: 200 20px/1.5 Helvetica, Verdana, sans-serif;
+  border-bottom: 1px solid #ccc;
+}
+
+.mylist>ul>li:last-child {
+  border: none;
+}
+
+.mylist>ul>li a {
+  text-decoration: none;
+  color: #000;
+  display: block;
+  width: 200px;
+
+  -webkit-transition: font-size 0.3s ease, background-color 0.3s ease;
+  -moz-transition: font-size 0.3s ease, background-color 0.3s ease;
+  -o-transition: font-size 0.3s ease, background-color 0.3s ease;
+  -ms-transition: font-size 0.3s ease, background-color 0.3s ease;
+  transition: font-size 0.3s ease, background-color 0.3s ease;
+}
+
+.mylist>ul>li a:hover {
+  font-size: 30px;
+  background: #f6f6f6;
+}
