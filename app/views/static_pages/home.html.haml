@@ -1,18 +1,33 @@
 %head
-  %title USPMais - Inicio
+  %link{:href => "https://fonts.googleapis.com/css?family=Montserrat&display=swap", :rel => "stylesheet"}/
+  %title USP+
 
-%h1 Pagina inicial - USPMais
 .col-md-10.col-md-offset-1
   .center.jumbotron
     %h1 Bem vindx ao USPMais, o maior e mais completo portal de eventos da Universidade de São Paulo
+  =#  %img.center
+  =#    = image_tag("welcome.png", alt: "USPMais")
 
-  %p Aqui, você encontra informações sobre:
-  %ul
-    %li Atividades de atléticas;
-    %li Atividades de dança;
-    %li Grupos de extensão;
-    %li Feiras e exposições;
-    %li E muito mais!
+  %p Fique por dentro dos eventos mais interessantes pra você:
+  %br
+  .row
+    .column
+      = image_tag("trophy.png", alt: "trophy")
+      Atividades de Atléticas
+    .column
+      = image_tag("dance.png", alt: "dance")
+      Atividades de Dança
+    .column
+      = image_tag("connection.png", alt: "extension")
+      Grupos de Extensão
+    .column
+      = image_tag("businessman.png", alt: "expositions")
+      Feiras e Exposições
+
+
+  %br
   %p
     Para você que é organizador, oferecemos uma plataforma completa para a criação e gerenciamento de eventos.
+    %br
     = link_to "Crie uma conta e saiba mais!", new_user_path
+  %br

@@ -1,5 +1,9 @@
 %html
   %head
+
+    = favicon_link_tag asset_path('favicon.ico'), :rel => 'icon', :type => "image/x-icon"
+    %link{:href => "https://fonts.googleapis.com/css?family=Montserrat&display=swap", :rel => "stylesheet"}/
+
     %meta{:content => "text/html; charset=UTF-8", "http-equiv" => "Content-Type"}/
     = csrf_meta_tags
     = csp_meta_tag
@@ -8,7 +12,7 @@
 
     %header.navbar.navbar-fixed-top.navbar-inverse
       .container
-        = link_to "USPMais", root_path, id: "logo"
+        = link_to image_tag("logo.png", alt: "logo"), root_path, id: "logo"
         %nav
           %ul.nav.navbar-nav.navbar-right
 
@@ -21,12 +25,12 @@
                   %li= link_to "Todos os Eventos", event_index_path
                   %li= link_to "Meus Eventos", event_my_path
             - else
-              %li= link_to "Lista de Eventos", event_index_path, id: "events_list"
+              %li= link_to "Eventos", event_index_path
 
             - if logged_in?
-              %li= link_to "Criar evento", new_event_path
+              %li= link_to "Evento+", new_event_path
             - else
-              %li= link_to "Criar usuário", new_user_path
+              %li= link_to "User+", new_user_path
 
             - if logged_in?
               -#%li= link_to "Usuario", user_index_path
@@ -35,13 +39,13 @@
                   Minha conta
                   %b.caret
                 %ul.dropdown-menu
-                  %li= link_to "Meu perfil", current_user
+                  %li= link_to "Meu USP+", current_user
                   %li= link_to "Editar", edit_user_path(current_user)
                   %li.divider
                   %li
-                    = link_to "Log out", logout_path, method: :delete
+                    = link_to "Log Out", logout_path, method: :delete
             - else
-              %li= link_to "Log in", session_new_path
+              %li= link_to "Log In", session_new_path
 
 
     %body
@@ -56,10 +60,11 @@
     = yield
 
     .container
+      %br
       %footer.footer
         %small
-          USPMais - Eventos e universidade
+          USPMais - A Universidade Fora da Sala de Aula
         %nav
           %ul
             %li= link_to "Sobre nós", static_pages_about_path
-            %li= link_to "Github", 'http://github.com/mrfelipenoronha/uspmais'
+            %li= link_to "GitHub", 'http://github.com/mrfelipenoronha/uspmais'

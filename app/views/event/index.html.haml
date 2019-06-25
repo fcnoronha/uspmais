@@ -1,13 +1,21 @@
 %head
-  %title Lista de eventos
+  %title Eventos
 
-%h1 Eventos Cadastrados
+%h1 Eventos
 
 .col-md-10.col-md-offset-1
-
-  %b Lista de Eventos:
-  %ul.events
-    - @events.each do |ev|
-      %li
-        =link_to ev.nome, event_path(ev)
-  = link_to "Criar novo evento", new_event_path, class: "btn btn-primary"
+  %div
+    %br
+    .row
+    %ul.events
+      - @events.each do |ev|
+        .column
+        %li
+          =link_to ev.nome, event_path(ev)
+    %br
+    %br
+    .row
+      .column
+        = link_to "Evento+", new_event_path, class: "btn btn-primary"
+    %br
+    %br

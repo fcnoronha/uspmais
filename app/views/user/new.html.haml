@@ -3,44 +3,51 @@
 
 %html
   %head
-    %title Criar usuário
+    %title USER+
 
-%h1 Criação de usuário
+%h1 USER+
 .row
   .col-md-6.col-md-offset-3
     = form_with scope: :user, url: '/user', local: true  do |f|
 
       = render 'shared/error_messages'
 
-      = f.label :nome
+      = f.label :nome, 'Nome da Organização'
+      .marked *
       = f.text_field :nome, class: 'form-control'
       %br
       = f.label :email
+      .marked *
       = f.email_field :email, class: 'form-control'
       %br
-      = f.label :instituto
+      = f.label :instituto, 'Instituto'
+      .marked *
       = f.text_field :instituto, class: 'form-control'
       %br
-      = f.label :curso
+      = f.label :curso, 'Curso'
+      .marked *
       = f.text_field :curso, class: 'form-control'
       %br
-      = f.label :info, 'Informações'
+      = f.label :info, 'Conte um pouco sobre a sua organização'
+      .marked *
       = f.text_area :info, class: 'form-control'
       %br
-      = f.label :link_site, 'Link site'
+      = f.label :link_site, 'Website'
       = f.url_field :link_site, class: 'form-control'
       %br
-      = f.label :link_fb, 'Link Facebook'
+      = f.label :link_fb, 'Página do Facebook'
       = f.url_field :link_fb, class: 'form-control'
       %br
-      = f.label :link_tt, 'Link Twitter'
+      = f.label :link_tt, 'Twitter'
       = f.url_field :link_tt, class: 'form-control'
       %br
-      = f.label :password, 'Senha'
+      = f.label :password, 'Crie uma Senha'
+      .marked *
       = f.password_field :password, class: 'form-control'
       %br
-      = f.label :password_confirmation, 'Confirmação de senha'
+      = f.label :password_confirmation, 'Confirme sua senha'
+      .marked *
       = f.password_field :password_confirmation, class: 'form-control'
 
       %br
-      = f.submit "Criar usuário", class: "btn btn-primary"
+      = f.submit "Crie minha conta!", class: "btn btn-primary"

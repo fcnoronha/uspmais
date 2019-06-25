@@ -1,3 +1,32 @@
 // Place all the styles related to the Event controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+.btn-primary {
+    background-color: #000000;
+    border-color: #343434;
+}
+
+.btn-primary:hover {
+    background-color: #343434;
+    border-color: #343434;
+}
+
+.marked {
+    display: inline;
+    color: #ff5555;
+}
+
+.describe {
+    text-align: center;
+    font-size: 120%;
+}
+
+.row {
+  display: flex;
+}
+
+.column {
+  flex: 33.33%;
+  padding: 5px;
+}

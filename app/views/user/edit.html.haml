@@ -5,7 +5,7 @@
   %head
     %title Editar usuário
 
-%h1 Edição de usuario
+%h1 Edição de usuário
 .row
   .col-md-6.col-md-offset-3
     = form_with model: @user, local: true  do |f|
@@ -13,30 +13,35 @@
       = render 'shared/error_messages'
 
       = f.label :nome
+      .marked *
       = f.text_field :nome, class: 'form-control'
       %br
       = f.label :email
+      .marked *
       = f.email_field :email, class: 'form-control'
       %br
       = f.label :instituto
+      .marked *
       = f.text_field :instituto, class: 'form-control'
       %br
       = f.label :curso
+      .marked *
       = f.text_field :curso, class: 'form-control'
       %br
-      = f.label :info, 'Informações'
+      = f.label :info, 'Descrição'
       = f.text_area :info, class: 'form-control'
       %br
-      = f.label :link_site, 'Link site'
+      = f.label :link_site, 'Website'
       = f.url_field :link_site, class: 'form-control'
       %br
-      = f.label :link_fb, 'Link Facebook'
+      = f.label :link_fb, 'Facebook'
       = f.url_field :link_fb, class: 'form-control'
       %br
-      = f.label :link_tt, 'Link Twitter'
+      = f.label :link_tt, 'Twitter'
       = f.url_field :link_tt, class: 'form-control'
       %br
       = f.label :password, 'Senha'
+      .marked *
       = f.password_field :password, class: 'form-control'
       %br
       = f.submit "Salvar Mudanças", class: "btn btn-primary"
@@ -44,4 +49,4 @@
       %br
       %br
       %br
-      = link_to "Deletar Usuário", user_path(current_user), method: :delete, class: "btn btn-primary", data: {confirm: "Você tem certeza?"}
+      = link_to "Deletar Usuário", user_path(current_user), method: :delete, class: "btn btn-primary", data: {confirm: "Você vai nos deixar? :-("}

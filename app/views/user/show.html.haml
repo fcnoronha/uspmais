@@ -1,37 +1,39 @@
 %head
-  %title Usuario
-
-%h1 Meu USP+
+  %title= @user.nome
+%br
+%h1= @user.nome
 
 .col-md-10.col-md-offset-1
-  %p
-    Nome:
-    %i= @user.nome
+  .describe
     %br
-    -#FOTO:
-    -#%i= @event.foto
-    -#br
-    Email:
-    %i= @user.email
     %br
-    Instituto:
-    %i= @user.instituto
+    = @user.info
     %br
-    Curso:
-    %i= @user.curso
+    = @user.curso
+    \-
+    = @user.instituto
     %br
-    Informações:
-    %i= @user.info
     %br
-    - unless @user.link_site.empty?
-      Link site:
-      %i= @user.link_site
-      %br
-    - unless @user.link_fb.empty?
-      Link Facebook:
-      %i= @user.link_fb
     %br
-    - unless @user.link_tt.empty?
-      Link Twitter:
-      %i= @user.link_tt
-      %br
+
+    .row
+      .column
+        = image_tag("message.png", alt: "email")
+        = @user.email
+      - unless @user.link_site.empty?
+        .column
+          = image_tag("web.png", alt: "site")
+          = @user.link_site
+      - unless @user.link_fb.empty?
+        .column
+          = image_tag("facebook.png", alt: "facebook")
+          = @user.link_fb
+      - unless @user.link_tt.empty?
+        .column
+          = image_tag("twitter.png", alt: "twitter")
+          = @user.link_tt
+
+    %br
+    %br
+    %br
+    %br

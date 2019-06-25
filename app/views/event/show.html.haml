@@ -1,32 +1,42 @@
 %head
-  %title Página do evento
-
-%h1 Página do evento
+  %title= @event.nome
+%br
+%h1= @event.nome
 
 .col-md-10.col-md-offset-1
-  %p
-    Nome:
-    %i= @event.nome
+  .describe
+    %br
+    %br
+    = @event.info
+    %br
+    %br
     %br
     -#FOTO:
     -#%i= @event.foto
     -#br
-    Informações:
-    %i= @event.info
+    .row
+      .column
+        = image_tag("place.png", alt: "place")
+        = @event.local
+      .column
+        = image_tag("schedule.png", alt: "day")
+        = @event.date.strftime("%d/%m/%Y")
+      .column
+        = image_tag("clock.png", alt: "time")
+        = @event.time.strftime("%R")
     %br
-    Local:
-    %i= @event.local
-    %br
-    Data:
-    %i= @event.date.strftime("%d/%m/%Y")
-    %br
-    Hora:
-    %i= @event.time.strftime("%R")
     %br
     %br
+
+
     - if logged_in? and @my_events.include? @event
-      = link_to "Editar Evento", edit_event_path(@event.id), class: "btn btn-primary"
+      .row
+        .column
+          = link_to "Editar Evento", edit_event_path(@event.id), class: "btn btn-primary"
+        .column
+          = link_to "Deletar Evento", event_path(@event.id), method: :delete,
+          data: {confirm: "Você tem certeza?"}, class: "btn btn-primary"
       %br
       %br
-      = link_to "Deletar Evento", event_path(@event.id), method: :delete,
-      data: {confirm: "Você tem certeza?"}, class: "btn btn-primary"
+      %br
+      %br
