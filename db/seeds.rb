@@ -7,3 +7,28 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 
 # senha eh felipe220499
+
+User.create!(nome:  "Example User",
+             email: "example@railstutorial.org",
+             instituto: "IME",
+             curso: "BCC",
+             info: "pergunta no posto ipiranga",
+             password:              "foobar",
+             password_confirmation: "foobar",
+             activated: true,
+             activated_at: Time.zone.now)
+
+99.times do |n|
+  name  = Faker::Name.name
+  email = "example-#{n+1}@railstutorial.org"
+  password = "password"
+  User.create!(nome:  name,
+              email: email,
+              instituto: "IME",
+              curso: "BCC",
+              info: "pergunta no posto ipiranga",            
+              password:              password,
+              password_confirmation: password,
+              activated: true,
+              activated_at: Time.zone.now)
+end

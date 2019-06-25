@@ -9,3 +9,52 @@ one: {}
 #
 two: {}
 # column: value
+
+michael:
+  nome: Michael Example
+  email: michael@example.com
+  password_digest: <%= User.digest('password') %>
+  instituto: "IME",
+  curso: "BCC",
+  info: "pergunta no posto ipiranga",
+  activated: true
+  activated_at: <%= Time.zone.now %>
+
+archer:
+  nome: Sterling Archer
+  email: duchess@example.gov
+  password_digest: <%= User.digest('password') %>
+  instituto: "IME",
+  curso: "BCC",
+  info: "pergunta no posto ipiranga",
+  activated: true
+  activated_at: <%= Time.zone.now %>
+
+lana:
+  nome: Lana Kane
+  email: hands@example.gov
+  password_digest: <%= User.digest('password') %>
+  instituto: "IME",
+  curso: "BCC",
+  info: "pergunta no posto ipiranga",
+  activated: true
+  activated_at: <%= Time.zone.now %>
+
+malory:
+  name: Malory Archer
+  email: boss@example.gov
+  password_digest: <%= User.digest('password') %>
+  activated: true
+  activated_at: <%= Time.zone.now %>
+
+<% 30.times do |n| %>
+user_<%= n %>:
+  nome:  <%= "User #{n}" %>
+  email: <%= "user-#{n}@example.com" %>
+  password_digest: <%= User.digest('password') %>
+  instituto: "IME",
+  curso: "BCC",
+  info: "pergunta no posto ipiranga",
+  activated: true
+  activated_at: <%= Time.zone.now %>
+<% end %>

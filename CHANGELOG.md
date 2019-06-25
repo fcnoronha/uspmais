@@ -290,3 +290,29 @@ criar uma nova, hosts, que ligasse user a events.
 
 - Fiz outros testes com o Cucumber, da maneira como descrevi no dia 20/06
 - Esse link e' perfeito https://stackoverflow.com/questions/2024917/how-do-i-click-on-a-specific-button-using-cucumber-webrat-when-the-name-of-the-b
+
+## 24/06 Rodrigo
+
+- Criei um controller novo através do comando `rails g controller AccountActivations` que cuidará da ativação de conta.
+
+- Adicionei a ação de edição do account_activations a `routes.rb`.
+
+- Adicionei 3 novos atributos ao user através do comando `rails generate migration add_activation_to_users \ activation_digest:string activated:boolean activated_at:datetime`.
+
+- Executei `rails db:migrate` para atualizar o banco de dados.
+
+- Adicionei o código para ativação do e-mail no `user.rb`.
+
+- Executei `rails generate mailer UserMailer account_activation` para criar o método account_activation.
+
+- Adicionei o método account_activation no `user_mailer.rb`.
+
+- Atualizei as views do account_activation.
+
+- Adicionei configuração para o development environment da aplicação.
+
+- Criei o método new_token no `user.rb`.
+
+- 
+
+[Fonte](https://www.railstutorial.org/book/account_activation)

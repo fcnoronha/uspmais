@@ -14,6 +14,7 @@ Rails.application.routes.draw do
   resources :user
   resources :org
   resources :event
+  resources :account_activations, only: [:edit]
 
   # Its a vision to application root
   # get '/', to 'user#index' (Same as bellow)
