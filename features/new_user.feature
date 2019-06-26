@@ -6,4 +6,4 @@ Feature: Go to new user page
             Scenario: Access new user page
                     Given I am on the home page
                     When I click "Crie uma conta e saiba mais"
-                    Then I should see "Criação de usuário"
+                    Then I should see "USER+"
