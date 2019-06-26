@@ -5,7 +5,9 @@ services:
 
 before_install:
   - docker-compose build
-  - docker-compose up -d
+  - docker-compose up
+  - docker-compose down
+  - docker-compose up
   - docker exec -ti uspmais_web_1 rspec
   - docker exec -ti uspmais_web_1 cucumber
 
