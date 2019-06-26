@@ -1,0 +1,14 @@
+language: ruby
+
+services:
+  - docker
+
+before_install:
+  - docker-compose build
+  - docker-compose up -d
+  - docker exec -ti uspmais_web_1 rspec
+  - docker exec -ti uspmais_web_1 cucumber
+
+script:
+  - rspec
+  - cucumber
