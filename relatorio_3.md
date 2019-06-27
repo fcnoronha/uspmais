@@ -7,7 +7,7 @@
 
 ---
 
-# Como executar
+# Como executar em modo de produção
 
 1. `git clone https://github.com/mrfelipenoronha/uspmais.git` - Clona o repositório do github
 
@@ -19,9 +19,13 @@
 
 5. `sudo docker-compose down` - Para a execução
 
-6. Para acessar a versão já online da aplicação hospedada pelo heroku, basta acessar `https://uspmais.herokuapp.com/`
+6. Para execução dos nossos teste, basta abrir o terminal iterativo docker após construiur a imagem do projeto e subir a aplicação, através do comando `sudo docker exec -ti uspmais_web_1 /bin/bash`. No terminal, digite `rspec` para testar os nossos models e controllers, e digite `cucumber` que testará as nossas views.
 
-7. Para execução dos nossos teste, basta abrir o terminal iterativo docker após construiur a imagem do projeto e subir a aplicação, através do comando `sudo docker exec -ti uspmais_web_1 /bin/bash`. No terminal, digite `rspec` para testar os nossos models e controllers, e digite `cucumber` que testará as nossas views.
+# Execução como usuário
+
+Para acessar a versão já online da aplicação hospedada pelo heroku, basta acessar `https://uspmais.herokuapp.com/`
+
+---
 
 > Em alguns momentos o docker-compose up não funciona de primeira, sendo necessário que o container seja finalizado e inicializado novamente para o funcionamento correto.
 
@@ -57,9 +61,9 @@ Quanto aos papéis do desenvolvimento ágil, o Felipe e a Daniela se ajudaram se
 
 Quanto a implementação, como já mencionado, existe o arquivo CHANGELOG que descreve cada alteração feita no decorrer da produção. Mais resumidamente:
   - o grupo todo reunido traçou as metas para essa última fase.
-  - o Felipe cuidou dos testes automatizados com RSpec, algumas otimizações e correções de erros.
+  - o Felipe cuidou dos testes automatizados com RSpec, de otimizações e correções de erros.
   - o Rodrigo fez algumas otimizações e correções de erros
-  - a Daniela trabalhou com o Cucumber, além de otimizar e corrigir erros também.
+  - a Daniela trabalhou com o Cucumber, além de embelezar através do CSS, otimizar e corrigir erros também.
 
 ## Principais dificuldades encontradas
 
