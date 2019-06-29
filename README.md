@@ -1,4 +1,4 @@
-# USPMais - A universidade fora da sala de aula
+![logo](logo.png "USP+  A universidade fora da sala de aula")
 
 ---
 
@@ -25,6 +25,14 @@ Para acessar a versão online da aplicação hospedada pelo heroku, basta acessa
 ## Próximos passos ?
 
 Hoje, podemos nos dizer satisfeitos com o nosso trabalho, porém ainda não alcançamos o nosso objetivo. Começamos com a ideia de distribuir a nossa aplicação para solucionar um problema que discutimos e encontramos no nosso dia a dia no instituto, e agora cabe a nós apresentarmos e dar esse retorno ao IME, ou até talvez, a USP inteira.
+
+A seguir esta uma lista com as proximas mudanças que faremos na plataforma:
+
+- Tradução de mensagens em erros
+- Validação por email da criação de usuario.
+- Ligação com Travis-CI
+- Uso de API do googleMaps para localização de evento
+- Integração com API da google para salvar eventos na agenda.
 
 
 ## Agradecimentos
