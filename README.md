@@ -1,38 +1,38 @@
-# Como executar
+# USPMais - A universidade fora da sala de aula
 
-- `sudo docker-compose build` - Constrói a imagem do projeto atual
+---
 
-- `sudo docker-compose up -d` - Subindo a aplicação, -d é para rodar em background
+Esse projeto esta sendo construido por Daniela Favero, Felipe Noronha e Rodrigo Vidotti como projeto da disciplina MAC0218 - Tecnicas de programação II, do instituto de Matematica e Estatistica da Universidade de São Paulo.
 
-- Acesse `http://localhost:3000`
+Para acessar a versão online da aplicação hospedada pelo heroku, basta acessar [este link](https://uspmais.herokuapp.com/).
 
-- `sudo docker exec -ti uspmais_web_1 /bin/bash` - Abre terminal iterativo dentro do docker
+# Como executar localmente
 
-- `sudo docker-compose down` - Para tudoooo!
+1. `git clone https://github.com/mrfelipenoronha/uspmais.git` - Clona o repositório do github
 
-- Caso tenha feito modificações na gemas ou algo mais profundo, execute `docker-compose run web bundle install && docker-compose up --build`
+2. `sudo docker-compose build` - Constrói a imagem do projeto atual
 
-> Comandos previamente executados (não mais necessários)   
-> - 'docker-compose run web rails new . --force --no-deps --database=postgresql'   
-> - 'sudo chown -R $USER:$USER .'
+3. `sudo docker-compose up` - Subindo a aplicação
 
-# Mudanças
+4. Acesse `http://localhost:3000`
 
-Mudanças podem ser acompanhadas no arquivo `CHANGELOG.md`
+5. `sudo docker-compose down` - Para a execução
 
-# Objetivo
+6. Para execução dos nossos teste, basta abrir o terminal iterativo docker após construiur a imagem do projeto e subir a aplicação, através do comando `sudo docker exec -ti uspmais_web_1 /bin/bash`. No terminal, digite `rspec` para testar os nossos models e controllers, e digite `cucumber` que testará as nossas views.
 
-Um site contendo informações sobre hórarios das atividades das atividades extracurriculares do IME, potencialmente outras instituições também serão incluidas. Tais atividades podem ser:
-- Grupos de extensão;
-- Atividades de dança;
-- Atividades de atleticas;
-- Feiras e exposições;
-- Etc.
+> Em alguns momentos o docker-compose up não funciona de primeira, sendo necessário que o container seja finalizado e inicializado novamente para o funcionamento correto.
 
-Todo o site contaria com uma gama de filtros e seleções, fazendo com que o usuário pudesse ver todas as atribuições da atividade, tais como, horário, abertura ao público, preços, etc.    
-O usuário poderia realizar um log in para gerenciar todos seus interesses e se inscrever em tais eventos. Os organizadores de evento teriam um log in para gerenciar seus eventos, obtendo informações sobre o publico atingindo, quantidade de interessados, etc.  
+## Próximos passos ?
 
-## Nome dos integrantes
-- Daniela Favero,  10277443
-- Felipe Noronha,  10737032
-- Rodrigo Vidotti, 10687896
+Hoje, podemos nos dizer satisfeitos com o nosso trabalho, porém ainda não alcançamos o nosso objetivo. Começamos com a ideia de distribuir a nossa aplicação para solucionar um problema que discutimos e encontramos no nosso dia a dia no instituto, e agora cabe a nós apresentarmos e dar esse retorno ao IME, ou até talvez, a USP inteira.
+
+
+## Agradecimentos
+
+Gostaríamos de agradecer primeiramente ao professor e monitor da disciplina, que deram a oportunidade e o apoio necessário para que pudéssemos aprender sobre a construção de uma aplicação a partir do zero, bem como a possibilidade de vivenciarmos a metodologia ágil, o trabalho em equipe e a formação de conhecimento através da prática.
+
+Também é importante evidenciar o papel da universidade que nos disponibiliza esse ambiente de aprendizado contínuo, tal como o próprio ambiente físico como o fornecimento de equipamentos para que pudessemos trabalhar e nos reunirmos.
+
+Por fim, temos que agradecer aos vários tutoriais, soluções e pessoas dispostas a nos ajudar, tanto conhecidos como na própria internet, como por exemplo o StackOverFlow.
+
+Muito obrigado.
