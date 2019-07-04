@@ -1,0 +1,25 @@
+language: ruby
+
+services:
+  - docker
+
+before_install:
+  - docker -v
+  - docker-compose -v
+
+install:
+  - docker-compose build
+
+before_script:
+  - docker-compose run --rm --no-deps web echo 'Gems now pre-installed.'
+  - docker-compose up -d
+  - docker-compose down
+  - docker-compose up -d
+  - docker ps
+
+script:
+  - docker-compose exec web rails spec
+  - docker-compose exec web rails cucumber
+
+after_script:
+  - docker-compose down
