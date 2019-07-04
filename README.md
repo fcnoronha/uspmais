@@ -1,5 +1,7 @@
 # USP+ A universidade fora da sala de aula
 
+[![Build Status](https://travis-ci.org/mrfelipenoronha/uspmais.svg?branch=master)](https://travis-ci.org/mrfelipenoronha/uspmais)
+
 [![Coverage Status](https://coveralls.io/repos/github/mrfelipenoronha/uspmais/badge.svg?branch=master)](https://coveralls.io/github/mrfelipenoronha/uspmais?branch=master)
 
 ![logo](logo.png "USP+  A universidade fora da sala de aula")
