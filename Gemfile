@@ -82,3 +82,6 @@ gem 'bcrypt', '3.1.12'
 # Dropdown menu
 gem 'jquery-rails', '~> 4.3', '>= 4.3.3'
 gem 'rails-ujs', '~> 0.1.0'
+
+# Coverall - tests
+gem 'coveralls', require: false
