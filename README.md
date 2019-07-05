@@ -2,6 +2,7 @@
 
 [![Build Status](https://travis-ci.org/mrfelipenoronha/uspmais.svg?branch=master)](https://travis-ci.org/mrfelipenoronha/uspmais)
 [![Coverage Status](https://coveralls.io/repos/github/mrfelipenoronha/uspmais/badge.svg?branch=master)](https://coveralls.io/github/mrfelipenoronha/uspmais?branch=master)
+[![Heroku](https://heroku-badge.herokuapp.com/?app=uspmais&style=flat&svg=1)](https://uspmais.herokuapp.com)
 [![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)
 
 
