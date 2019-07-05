@@ -22,4 +22,5 @@ script:
   - docker-compose exec web rails cucumber
 
 after_script:
+  - coveralls push
   - docker-compose down
