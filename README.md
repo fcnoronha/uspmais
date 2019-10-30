@@ -1,4 +1,4 @@
-# USP+ A universidade fora da sala de aula
+# USP+ The university outside the classroom
 
 [![Build Status](https://travis-ci.org/mrfelipenoronha/uspmais.svg?branch=master)](https://travis-ci.org/mrfelipenoronha/uspmais)
 [![Coverage Status](https://coveralls.io/repos/github/mrfelipenoronha/uspmais/badge.svg?branch=master)](https://coveralls.io/github/mrfelipenoronha/uspmais?branch=master)
@@ -6,49 +6,49 @@
 [![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)
 
 
-![logo](logo.png "USP+  A universidade fora da sala de aula")
+![logo](logo.png "USP+  The university outside the classroom")
 
 ---
-
-Esse projeto esta sendo construido por Daniela Favero, Felipe Noronha e Rodrigo Vidotti como projeto da disciplina MAC0218 - Tecnicas de programação II, do instituto de Matematica e Estatistica da Universidade de São Paulo.
-
-Para acessar a versão online da aplicação hospedada pelo heroku, basta acessar [este link](https://uspmais.herokuapp.com/).
-
-# Como executar localmente
-
-1. `git clone https://github.com/mrfelipenoronha/uspmais.git` - Clona o repositório do github
-
-2. `sudo docker-compose build` - Constrói a imagem do projeto atual
-
-3. `sudo docker-compose up` - Subindo a aplicação
-
-4. Acesse `http://localhost:3000`
-
-5. `sudo docker-compose down` - Para a execução
-
-6. Para execução dos nossos teste, basta abrir o terminal iterativo docker após construiur a imagem do projeto e subir a aplicação, através do comando `sudo docker exec -ti uspmais_web_1 /bin/bash`. No terminal, digite `rspec` para testar os nossos models e controllers, e digite `cucumber` que testará as nossas views.
-
-> Em alguns momentos o docker-compose up não funciona de primeira, sendo necessário que o container seja finalizado e inicializado novamente para o funcionamento correto.
-
-## Próximos passos ?
-
-Hoje, podemos nos dizer satisfeitos com o nosso trabalho, porém ainda não alcançamos o nosso objetivo. Começamos com a ideia de distribuir a nossa aplicação para solucionar um problema que discutimos e encontramos no nosso dia a dia no instituto, e agora cabe a nós apresentarmos e dar esse retorno ao IME, ou até talvez, a USP inteira.
-
-A seguir esta uma lista com as proximas mudanças que faremos na plataforma:
-
-- Tradução de mensagens em erros
-- Validação por email da criação de usuario.
-- Ligação com Travis-CI
-- Uso de API do googleMaps para localização de evento
-- Integração com API da google para salvar eventos na agenda.
+This platform is being developed by Daniela Favero, Felipe Noronha and Rodrigo Vidotti as a project to the discipline MAC0218 - Programming Techniques II, from the Institute of Mathematics and Statistics @ University of Sao Paulo.
 
 
-## Agradecimentos
+To visit the online version of the application, hosted at Heroku, access [this link](https://uspmais.herokuapp.com/).
 
-Gostaríamos de agradecer primeiramente ao professor e monitor da disciplina, que deram a oportunidade e o apoio necessário para que pudéssemos aprender sobre a construção de uma aplicação a partir do zero, bem como a possibilidade de vivenciarmos a metodologia ágil, o trabalho em equipe e a formação de conhecimento através da prática.
+# How to execute locally
 
-Também é importante evidenciar o papel da universidade que nos disponibiliza esse ambiente de aprendizado contínuo, tal como o próprio ambiente físico como o fornecimento de equipamentos para que pudessemos trabalhar e nos reunirmos.
+1. `git clone https://github.com/mrfelipenoronha/uspmais.git` - Clones the GitHub repository
 
-Por fim, temos que agradecer aos vários tutoriais, soluções e pessoas dispostas a nos ajudar, tanto conhecidos como na própria internet, como por exemplo o StackOverFlow.
+2. `sudo docker-compose build` - Builds the image of the current project
 
-Muito obrigado.
+3. `sudo docker-compose up` - Upping the application
+
+4. Access `http://localhost:3000`
+
+5. `sudo docker-compose down` - Stops the execution
+
+6. In order to execute our tests, just open the interative Docker terminal after building the project image and upping the application through the command `sudo docker exec -ti uspmais_web_1 /bin/bash`. At terminal, type `rspec` to test our models and controllers, and type `cucumber` to test our views.
+
+> Sometimes the docker-compose up doesn't work at first try, so it's necessary to finish the container before initializing it again and, therefore, generating proper work.
+
+## Next steps ?
+
+By now, we can say that we're satisfied with our work, however we haven't achieved our subject. We've started with the ideia of distributing out application to solve a problem we found in our routine at the institute. Now it's up to us showing the results and give this feedback to IME, or even, the whole USP.
+
+Here's a list with the next changes we'll make in the platform:
+
+- Translation to error messages;
+- Email validation of user creation;
+- Link with Travis-CI;
+- Use of the Google Maps API to event localization;
+- Integration with Google API to save events in calendar.
+
+
+## Special thanks
+
+We'd like to thank the discipline's professor and monitor, that gave us the opportunity and the necessary support that allowed us to learn about the development of an application from scratch, and also letting us live agile methodology, team work and knowledge construction through practice.
+
+It's also import to highlight the role of the University that offers us this environment of continuous learning. We are also grateful for the physical space and equipments provided so we could gather and work.
+
+Finally, we thank the many tutorials, solutions and people that were able to help us, acquaintances or at internet, such as Stack Overflow.
+
+Thank's a lot.
