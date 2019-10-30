@@ -31,7 +31,7 @@ To visit the online version of the application, hosted at Heroku, access [this l
 
 ## Next steps ?
 
-By now, we can say that we're satisfied with our work, however we haven't achieved our subject. We've started with the ideia of distributing out application to solve a problem we found in our routine at the institute. Now it's up to us showing the results and give this feedback to IME, or even, the whole USP.
+By now, we can say that we're satisfied with our work, however we haven't achieved our subject. We've started with the ideia of distributing our application to solve a problem we found in our routine at the institute. Now it's up to us showing the results and give this feedback to IME, or even, the whole USP.
 
 Here's a list with the next changes we'll make in the platform:
 
@@ -44,7 +44,7 @@ Here's a list with the next changes we'll make in the platform:
 
 ## Special thanks
 
-We'd like to thank the discipline's professor and monitor, that gave us the opportunity and the necessary support that allowed us to learn about the development of an application from scratch, and also letting us live agile methodology, team work and knowledge construction through practice.
+We'd like to thank the discipline's professor and monitor, that gave us the opportunity and the necessary support that allowed us to learn about the development of an application from scratch, and also letting us experience agile methodology, team work and knowledge construction through practice.
 
 It's also import to highlight the role of the University that offers us this environment of continuous learning. We are also grateful for the physical space and equipments provided so we could gather and work.
 
