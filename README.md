@@ -5,8 +5,7 @@
 [![Heroku](https://heroku-badge.herokuapp.com/?app=uspmais&style=flat&svg=1)](https://uspmais.herokuapp.com)
 [![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)
 
-
-![logo](logo.png "USP+  The university outside the classroom")
+[<img src="logo.png">](https://uspmais.herokuapp.com/)
 
 ---
 This platform is being developed by Daniela Favero, Felipe Noronha and Rodrigo Vidotti as a project to the discipline MAC0218 - Programming Techniques II, from the Institute of Mathematics and Statistics @ University of Sao Paulo.
@@ -20,13 +19,13 @@ To visit the online version of the application, hosted at Heroku, access [this l
 
 2. `sudo docker-compose build` - Builds the image of the current project
 
-3. `sudo docker-compose up` - Upping the application
+3. `sudo docker-compose up` - Deploying application
 
 4. Access `http://localhost:3000`
 
 5. `sudo docker-compose down` - Stops the execution
 
-6. In order to execute our tests, just open the interative Docker terminal after building the project image and upping the application through the command `sudo docker exec -ti uspmais_web_1 /bin/bash`. At terminal, type `rspec` to test our models and controllers, and type `cucumber` to test our views.
+6. In order to execute our tests, just open the interative Docker terminal after building the project image and deploying application locally through the command `sudo docker exec -ti uspmais_web_1 /bin/bash`. At terminal, type `rspec` to test our models and controllers, and type `cucumber` to test our views.
 
 > Sometimes the docker-compose up doesn't work at first try, so it's necessary to finish the container before initializing it again and, therefore, generating proper work.
 
